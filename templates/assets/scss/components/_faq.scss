@@ -1,0 +1,271 @@
+.service__blockchain {
+    .accordion.block {
+        border-top: 1px solid rgba(0, 0, 0, 0.5);
+        &:last-child {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        }
+        .acc-btn {
+            cursor: pointer;
+            display: flex;
+            align-items: start;
+            flex-wrap: wrap;
+            padding: 60px 0 40px;
+            justify-content: space-between;
+            @include respond(md) {
+                flex-wrap: nowrap;
+            }
+            @include respond(xs) {
+                flex-wrap: wrap;
+                gap: 33px;
+            }
+            .heading {
+                font-size: 40px;
+            }
+            .holder p {
+                @include respond(md) {
+                    font-size: 16px;
+                }
+                @include respond(xs) {
+                    margin-right: -20px;
+                }
+            }
+            .arrow {
+                width: 48px;
+                height: 60px;
+                position: relative;
+                @include border-radius(24px);
+                background: transparent;
+                border: 1px solid #0d0d0d;
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    content: "\f063";
+                    font-size: 18px;
+                    font-weight: 300;
+                    font-family: "Font Awesome 6 Pro";
+                    @include transition(.4s);
+                    color: var(--color-heading);
+                    @include transform(translate(-50%, -50%)); 
+                }
+            }
+            .heading {
+                width: 48%;
+                font-size: 40px;
+                @include respond(lg) {
+                    font-size: 29px;
+                }
+                @include respond(xs) {
+                    width: 100%;
+                    font-size: 26px;
+                }
+                span {
+                    font-size: 30px;
+                    margin-right: 12px;
+                    color: var(--color-black);
+                    @include respond(lg) {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .holder {
+                a {
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #00322f;
+                    display: block;
+                    margin-top: 50px;
+                    text-decoration: underline;
+                    @include respond(xs) {
+                        margin-top: 25px;
+                    }
+                    
+                }
+            }
+        }
+        .acc_body {
+            display: none;
+            margin-top: 20px;
+           &.current {
+            display: block;
+           } 
+        }
+        &.active-block .acc-btn .arrow {
+            border: none;
+            background: #24572f;
+            &::before {
+               content: "\f063";
+               top: 15px;
+               left: 18px;
+               color: var(--color-white);
+               transform: rotate(180deg);
+           }
+        }
+    }
+}
+.ser-faq-top {
+    .xb-content {
+        display: inline-block;
+    }
+}
+.xb-faq-left {
+    gap: 313px;
+    display: flex;
+    flex-direction: column;
+    @include respond(md) {
+        gap: 30px;
+    }
+    .xb-item {
+        &--title {
+            font-size: 30px;
+            margin-bottom: 22px;
+            color: var(--color-black);
+        }
+    }
+}
+.faq__blockchain {
+    .accordion_box {
+        .block {
+            margin-bottom: 28px;                    
+            padding-bottom: 15px;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+            .acc-btn {
+                font-size: 28px;
+                font-weight: 400;
+                padding: 25px 30px 25px 0;
+                cursor: pointer;
+                letter-spacing: -0.01em;
+                font-family: var(--font-heading);
+                @include respond(lg) {
+                    font-size: 28px;
+                }
+                @include respond(xs) {
+                    font-size: 24px;
+                }
+                .arrow {
+                    position: absolute;
+                    right: 24px;
+                    top: 26px;
+                    &::before {
+                        font-size: 28px;
+                        content: "\f067";
+                        font-weight: 300;
+                        position: absolute;
+                        color: var(--color-black);
+                        font-family: "Font Awesome 6 Pro";
+                        @include transition(0.6s cubic-bezier(0.165, 0.84, 0.44, 1));   
+                    }
+                }
+            }
+            &.active-block .acc-btn .arrow::before {
+                content: "\f068";
+                transform: rotate(180deg);
+            }
+            .acc_body {
+                display: none;
+                position: relative;
+                padding-bottom: 15px;
+               &.current {
+                display: block;
+               } 
+            } 
+        }
+    }
+}
+.faq-left-content {
+    overflow: hidden;
+    @include border-radius(16px);
+    img {
+        width: 100%;
+    }
+}
+.ps-faq {
+    margin-left: 18px;
+    @include respond(md) {
+        margin-left: 0;
+    }
+    .accordion_box {
+        padding: 30px 30px 37px;
+        background: var(--color-white);
+        @include border-radius(16px);
+        @include respond(xs) {
+            padding: 30px 20px 37px;
+        }
+        .block {
+            color: #0d0d0d;
+            padding-left: 20px;
+            padding-right: 37px;
+            margin-bottom: 0;
+            padding-bottom: 25px;
+            border-bottom: none;
+            &::before {
+                position: absolute;
+                content: '';
+                left: 49%;
+                bottom: 0;
+                height: 1px;
+                width: 91%;
+                background:  rgba(0, 0, 0, 0.5);
+                transform: translateX(-50%);
+            }
+            .acc-btn {
+                font-size: 30px;
+                font-weight: 500;
+                padding: 35px 0 16px; 
+                @include respond(xs) {
+                    font-size: 24px;
+                }
+                .number {
+                    font-size: 20px;
+                    margin-right: 55px;
+                    @include respond(xs) {
+                        margin-right: 15px;
+                    }
+                }
+                .arrow {
+                    position: absolute;
+                    right: 60px;
+                    top: 26px;
+                    @include respond(xs) {
+                        top: 37px;
+                        right: 45px;
+                    }
+                    &::before {
+                        font-size: 28px;
+                        content: "\f106";
+                        font-weight: 300;
+                        color: #0d0d0d;  
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            .acc_body {
+                padding-left: 92px;
+                display: none;
+                position: relative;
+                padding-bottom: 14px;
+                @include respond(xs) {
+                    padding-left: 42px;
+                }
+               &.current {
+                display: block;
+               } 
+            }
+            &.active-block {
+                background: #0a55c7;
+                color: var(--color-white);
+                @include border-radius(8px);
+                &::before {
+                    display: none;
+                }
+                .acc-btn .arrow::before {
+                   content: "\f106";
+                   color: var(--color-white);
+                   transform: rotate(0deg);
+               }
+            }
+        }
+    }
+}
+

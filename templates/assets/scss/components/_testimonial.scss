@@ -1,0 +1,132 @@
+.xb-testimonial-item {
+    padding-right: 18px;
+    .xb-item {
+        &--title {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--color-white);
+            @include transition(.5s);
+            @include respond(xs) {
+                font-size: 24px;
+            }
+        }
+        &--content {
+            font-weight: 600;
+            line-height: 32px;
+            margin: 55px 0;
+            opacity: 0;
+            text-transform: capitalize;
+            @include transition(.5s);
+            transition-delay: .1s;
+            @include transform(translateY(30px));
+        }
+        &--author {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 36px;
+            opacity: 0;
+            color: var(--color-primary);
+            @include transition(.5s);
+            transition-delay: .2s;
+            @include transform(translateY(30px));
+            @include respond(xs) {
+                font-size: 24px;
+            }
+            
+            @include respond(sm) {
+                font-size: 22px;
+            }
+        }
+    } 
+}
+.xb-testimonial-slider {
+    margin-left: 107px;
+    .swiper-slide-active {
+        .xb-testimonial-item {
+            .xb-item {
+                &--content,
+                &--author {
+                    opacity: 1;
+                    @include transform(translateY(0));
+                }
+            }
+        }
+    }
+}
+.xb-testimonial-wrap {
+    position: relative;
+    .tes-quote {
+        position: absolute;
+        top: -5px;
+        left: 0;
+    } 
+    .swiper-button-next,
+    .swiper-button-prev {
+        height: 27px;
+        width: 83px;
+        top: 45%;
+        &::after {
+            display: none;
+        }
+    }
+    .swiper-button-prev {
+        left: -185px;
+        @include respond(laptop) {
+            left: -20px;
+        }
+        @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+            left: -5px;
+        }
+        @include respond(lg) {
+            bottom: 20px;
+            top: auto;
+            left: 5px;
+        }
+        @include respond(md) {
+            left: -15px;
+        }
+        @include respond(xs) {
+            left: 0px;
+            max-width: 15%;
+        }
+    }
+    .swiper-button-next {
+        right: -100px;
+        left: auto;
+        @include respond(lg) {
+            bottom: 20px;
+            top: auto;
+            right: 0;
+        }
+        @include respond(xs) {
+            max-width: 15%;
+        }
+    }
+}
+.tes-company-logo {
+    gap: 19px;
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    @include respond(md) {
+        padding-top: 50px;
+        flex-direction: row;
+        justify-content: start;
+    }
+    @include respond(xs) {
+        justify-content: center;
+    }
+    @include respond(sm) {
+        justify-content: start;
+    }
+    .item {
+        overflow: hidden;
+        display: inline-block;
+        @include border-radius(7px);
+        @include respond(sm) {
+            width: 48%;
+        }
+    }
+}

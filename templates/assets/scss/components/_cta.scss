@@ -1,0 +1,32 @@
+.cta-bg {
+    z-index: 1;
+    min-height: 824px;
+    padding: 270px 0 270px;
+}
+.cta-content {
+    .title {
+        font-weight: 400;
+        font-size: 80px;
+        line-height: 1.1;
+        color: var(--color-black);
+        text-transform: capitalize;
+        @include respond(lg) {
+            font-size: 60px;
+        }
+        @include respond(md) {
+            font-size: 55px;
+        }
+        @include respond(xs) {
+            font-size: 40px;
+        }
+    }
+    .xb-btn a {
+        &::before {
+            border: 2px solid #FCCA03;
+            background: var(--color-primary-two);
+        }
+        &:hover {
+            color: var(--color-black);
+        }
+    }
+}

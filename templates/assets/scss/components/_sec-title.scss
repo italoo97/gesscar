@@ -1,0 +1,102 @@
+.sec-title {
+    .title {
+        font-size: 60px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        color: var(--color-heading);
+        @include respond(lg) {
+            font-size: 48px;
+        }
+        @include respond(xs) {
+            font-size: 38px;
+        }
+        span {
+            color: #24572f;
+        }
+    }
+    .xb-title {
+        font-size: 60px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        color: var(--color-white);
+        @include respond(lg) {
+            font-size: 48px;
+        }
+        @include respond(md) {
+            font-size: 43px;
+        }
+        @include respond(xs) {
+            font-size: 35px;
+        }
+        span {
+            color: #e6fa00;
+        }
+    }
+    &--two {
+        .title {
+            font-weight: 700;
+            font-size: 60px;
+            color: var(--color-white);
+            font-family: var(--font-heading);
+            text-transform: initial;
+            @include respond(lg) {
+                font-size: 50px;
+            }
+            @include respond(md) {
+                font-size: 45px;
+            }
+            @include respond(xs) {
+                font-size: 33px;
+            }
+        }
+        .sub_title {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 17px;
+            display: inline-block;
+            text-transform: uppercase;
+            color: var(--color-primary);
+        }
+    }
+    &--three {
+        .sub_title {
+            font-size: 14px;
+            color: #0d0d0d;
+            display: ruby-base;
+            margin-bottom: 28px;
+            padding: 4.5px 24px 4.5px 29px;
+            @include border-radius(13px);
+            text-transform: uppercase;
+            background: var(--color-primary-two);
+        }
+        .title {
+            font-size: 60px;
+            text-transform: initial;
+            color: var(--color-white);
+            @include respond(lg) {
+                font-size: 50px;
+            }
+            @include respond(xs) {
+                
+                font-size: 40px;
+            }
+        }
+        .content {
+            font-size: 30px;
+            color: #0d0d0d;
+            line-height: 40px;
+            max-width: 833px;
+            text-transform: initial;
+            display: block;
+        }
+    }
+}
+.about-sec-conent {
+    max-width: 858px;
+    margin-top: 25px;
+    display: inline-block;
+    a {
+        font-weight: 700;
+        color: var(--color-black);
+    }
+}

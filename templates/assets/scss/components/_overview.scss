@@ -1,0 +1,105 @@
+.overview-item {
+    overflow: hidden;
+    position: relative;
+    @include transition(.3s);
+    @include border-radius(16px);
+    .xb-item {
+        &--inner {
+            padding: 32px 30px 28px 20px;
+            background: var(--color-primary-two);
+        }
+        &--title {
+            font-weight: 700;
+            font-size: 24px;
+            margin-bottom: 15px;
+            @include respond(lg) {
+                font-size: 21px;
+            }
+        }
+        &--content {
+            color: #0d0d0d;
+            line-height: 28px;
+        }
+    }
+    .xb-img img {
+        width: 100%;
+        @include transition(.3s);
+    }
+    &--big {
+        .xb-item {
+            &--title {
+                position: absolute;
+                left: 29px;
+                top: 30px;
+                font-size: 30px;
+                font-weight: 600;
+                line-height: 40px;
+                color: var(--color-white);
+            }
+            &--tag {
+                position: absolute;
+                left: 29px;
+                bottom: 25px;
+                gap: 16px;
+                li a {
+                    color: #0d0d0d;
+                    padding: 10px 20px;
+                    @include border-radius(24px);
+                    background: var(--color-white);
+                }
+            }
+        }
+    }
+    &:hover {
+        .xb-img img {
+            transform: scale(1.03);
+        }
+    }
+}
+.overview-bottom-item {
+    padding-right: 15px;
+    .xb-item {
+        &--title {
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 40px;
+            margin-bottom: 20px;
+            color: var(--color-white);
+        }
+        &--content {
+            font-size: 16px;
+            line-height: 30px;
+            color: var(--color-white);
+        }
+        &--more-btn {
+            margin-top: 35px;
+            display: inline-block;
+            svg path {
+                @include transition(.3s);
+            }
+            span {
+                font-size: 16px;
+                font-weight: 600;
+                opacity: 0;
+                visibility: hidden;
+                display: inline-flex;
+                transform: translateX(-30px);
+                font-family: var(--font-heading);
+                color: var(--color-primary-two);
+                @include transition(.3s);
+            }
+        }
+    }
+    &:hover {
+        .xb-item--more-btn {
+            svg path {
+                fill: #FCCA03;
+            }
+            span {
+                opacity: 1;
+                visibility: visible;
+                @include transform(translateX(7px));
+            }
+        }    
+    } 
+}

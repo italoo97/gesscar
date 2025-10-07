@@ -1,0 +1,134 @@
+.main-menu {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    ul {
+        @include d-flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            position: relative;
+            &:not(:last-child) {
+                margin-right: 36px;
+            }
+            .submenu li {
+                margin-right: 0;
+            }
+            a {
+                z-index: 3;
+                font-weight: 700;
+                font-size: 20px;
+                padding: 10px 0;
+                position: relative;
+                text-decoration: none;
+                display: inline-block;
+                color: var(--color-white);
+                text-transform: capitalize;
+                @include transition(.3s);
+                font-family: var(--font-body);
+                @include respond(lg) {
+                    font-size: 18px;
+                }
+            }
+            &.menu-item-has-children {
+                & > a > span {
+                    &::after {
+                        content: "\2b";
+                        font-size: 15px;
+                        font-weight: 700;
+                        margin-left: 3px;
+                        @include transition(.3s);
+                        font-family: 'Font Awesome 6 Pro';
+                    }
+                }
+                &:hover > .submenu {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0px);
+                }
+            }
+            .submenu {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                position: absolute;
+                min-width: 250px;
+                top: 100%;
+                opacity: 0;
+                left: 0;
+                z-index: 3;
+                top: 100%;
+                padding: 20px 0;
+                text-align: left;
+                visibility: hidden;
+                background: #211f1e;
+                @include transition(.3s);
+                @include border-radius(3px);
+                transform: translateY(10px);
+                box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+                li {
+                    padding: 0 6px;
+                    margin-right: 0;
+                    a {
+                        padding: 5px 22px;
+                        display: block;
+                        font-size: 18px;
+                        letter-spacing: 0;
+                        font-weight: 500;
+                        position: relative;
+                        @include border-radius(5px);
+                        text-transform: capitalize;
+                        color: var(--color-white);
+                        @include transition(.3s);
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            left: 0;
+                            top: 45%;
+                            height: 2px;
+                            width: 10px;
+                            opacity: 0;
+                            text-decoration: left;
+                            @include transition(0.3s);
+                            background: var(--color-primary);
+                            @include transform(translateY(50%));
+                        }
+                    }
+                    ul {
+                        left: 100%;
+                        top: 0px;
+                    }
+                    &:hover > a,
+                    &.active > a {
+                        transform: translateX(22px);
+                        color: var(--color-primary);
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.main-menu ul li.menu-last ul.submenu {
+	right: 0;
+	left: auto;
+}
+.main-menu ul li.menu-last ul.submenu ul {
+    right: auto;
+    left: -100%;
+}
+.main-menu ul li ul.submenu .menu-item-has-children > a span::after {
+	position: absolute;
+    top: 12px;
+    right: 15px;
+    content: "\f0d7";
+    font-size: 13px;
+    font-family: 'Font Awesome 5 Pro';
+    @include transition(.3s);
+    transform: rotate(-90deg);
+}
+

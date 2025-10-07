@@ -1,0 +1,221 @@
+.xb-project-wrap {
+    padding: 0 120px 0 80px;
+    @include respond(md) {
+        padding: 0 30px 0 30px;
+    }
+    @include respond(md) {
+        padding: 0 10px;
+    }
+    .content-one {
+        margin-bottom: 20px;
+    }
+    .content-two {
+        margin-bottom: 37px;
+    }
+}
+.project-bg {
+    min-height: 1182px;
+}
+.project-item {
+    .xb-item {
+        &--img {
+            overflow: hidden;
+            @include border-radius(16px);
+            img {
+                width: 100%;
+                @include transition(.3s);
+            }
+        }
+        &--title {
+            font-size: 29px;
+            font-weight: 600;
+            margin: 25px 0 26px;
+            text-transform: initial;
+            color: var(--color-black);
+        }
+        &--content {
+            color: var(--color-black);
+        }
+        &--more-btn {
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 40px;
+            display: inline-block;
+            color: var(--color-black);
+            font-family: var(--font-heading);
+        }
+    }
+}
+.project-top {
+    .sec-title .content {
+        font-size: 20px;
+        color: #000;
+        line-height: 30px;
+        max-width: 720px;
+    }
+}
+.project-wrap {
+    margin-left: 315px;
+    overflow: hidden;
+    @include respond(laptop) {
+        margin-left: 40px;
+    }
+    @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+        margin-left: 15px;
+    }
+    @include respond(lg) {
+        margin-left: 15px;
+    }
+}
+.project-slider {
+    margin-right: -330px;
+    @media only screen and (max-width: 1023px) {
+        margin-right: 15px;
+    }
+}
+//project inner page style
+.project-menu {
+    button {
+        font-size: 18px;
+        font-weight: 500;
+        padding: 8px 40px;
+        @include border-radius(25px);
+        border: 1px solid #0d0d0d;
+        background: var(--color-white);
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+        @include respond(xs) {
+            margin-bottom: 20px;
+        }
+        &.active {
+            border: 1px solid transparent;
+            color: var(--color-white);
+            background: linear-gradient(180deg, #225530 0%, #749600 100%);
+        }
+    }
+}
+.project-single-item {
+    h3 a {
+        font-size: 30px;
+        font-weight: 400;
+        margin-top: 25px;
+        display: block;
+        color: var(--color-heading);
+        @include respond(lg) {
+            font-size: 25px;
+            
+        }
+    }
+    .image {
+        display: block;
+        overflow: hidden;
+        img {
+            transition: all 0.3s ease-out;
+        }
+        &:hover {
+            img {
+                transform: scale(1.03);
+            }
+        }
+    }
+}
+.project-details-heading {
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    @include respond(lg) {
+        font-size: 40px;
+    }
+    @include respond(md) {
+        font-size: 35px;
+    }
+    @include respond(xs) {
+        font-size: 30px;
+    }
+}
+.meta-list {
+    gap: 70px;
+    margin-top: 100px;
+    margin-bottom: 75px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(13, 13, 13, 0.2);
+    @include respond(lg) {
+        gap: 30px;
+    }
+    @include respond(xs) {
+        gap: 15px;
+    }
+    @include respond(sm) {
+        justify-content: start;
+    }
+    li {
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--color-heading);
+        span {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-family: var(--font-heading);
+        }
+        &:nth-child(2) {
+            margin-right: 105px;
+            @include respond(laptop) {
+                margin-right: 30px;
+            }
+            @include respond(lg) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+.project-details-list {
+    gap: 290px;
+    margin: 45px 0 75px;
+    @include respond(lg) {
+        gap: 200px;
+    }
+    @include respond(md) {
+        gap: 10px;
+    }
+    ul li {
+        display: flex;
+        gap: 8px;
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+}
+.project-details-img {
+    position: relative;
+    overflow: hidden;
+    img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+        transition: all 0.3s ease-out;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 0%;
+        left: 50%;
+        top: 50%;
+        background-color: rgba(255,255,255,.3);
+        transform: translate(-50%,-50%) rotate(-45deg);
+        z-index: 1;
+    }
+    &:hover {
+        img {
+            @include transform(scale(1.02));
+        }
+        &:after {
+            height: 250%;
+            transition: all 600ms linear;
+            background-color: transparent;
+        }
+    }
+}

@@ -1,0 +1,156 @@
+.hero-style-one {
+    min-height: 1024px;
+    @include respond(md) {
+        min-height: 960px;
+    }
+    @include respond(xs) {
+        min-height: 850px;
+    }
+    .xb-hero_content {
+        padding-top: 250px;
+        @include respond(xs) {
+            padding-top: 170px;
+        }
+        .xb-title {
+            font-size: 90px;
+            line-height: 110px;
+            display: inline-block;
+            color: var(--color-white);
+            @include respond(lg) {
+                font-size: 85px;
+            }
+            @media only screen and (max-width: 1023px) {
+                font-size: 80px;
+                line-height: 95px;
+            }
+            @include respond(md) {
+                font-size: 65px;
+                line-height: 85px;
+            }
+            @include respond(xs) {
+                font-size: 45px;
+                line-height: 56px;
+            }
+            span {
+                color: #e6fa00;
+            }
+        }
+        .hero-btn {
+            gap: 30px;
+        }
+    }
+}
+.hero-style-two {
+    padding: 170px 0 100px;
+    min-height: 860px;
+    @include respond(md) {
+        min-height: 800px;
+    }
+    @include respond(xs) {
+        min-height: 655px;
+        padding: 110px 0 100px;
+    }
+    @include respond(sm) {
+        padding: 170px 0 100px;
+    }
+    .xb-hero_content {
+        .content {
+            font-size: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            @include respond(lg) {
+                font-size: 24px;
+            }
+        }
+        .xb-title {
+            font-size: 80px;
+            font-weight: 800;
+            letter-spacing: 0;
+            margin-top: 20px;
+            color: var(--color-white);
+            text-transform: uppercase;
+            @include respond(lg) {
+                font-size: 70px;
+            }
+            @include respond(md) {
+                font-size: 61px;
+            }
+            @include respond(xs) {
+                font-size: 40px;
+            }
+        }
+        .hero-btn {
+            gap: 21px;
+        }
+    }
+}
+.hero-style-three {
+    z-index: 1;
+    min-height: 1068px;
+    @include respond(lg) {
+        min-height: 900px;
+    }
+    @include respond(xs) {
+        min-height: 850px;
+    }
+    .xb-hero_content {
+        position: absolute;
+        bottom: 200px;
+        left: 125px;
+        max-width: 870px;
+        @include respond(md) {
+            left: 60px;
+            max-width: 655px;
+        }
+        @include respond(xs) {
+            left: 20px;
+            bottom: 160px;
+        }
+        .content {
+            max-width: 633px;
+            font-weight: 400;
+            letter-spacing: -0.03em;
+            text-transform: capitalize;
+        }
+        .xb-title {
+            font-size: 80px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            letter-spacing: -0.01em;
+            color: var(--color-white);
+            text-transform: initial;
+            @include respond(md) {
+                font-size: 60px;
+            }
+            @include respond(xs) {
+                font-size: 48px;
+            }
+            @include respond(sm) {
+                font-size: 50px;
+            }
+            span {
+                color: var(--color-primary-two);
+            }
+            img {
+                transform: translateY(-18px);
+                @include respond(xs) {
+                    max-width: 10%;
+                    transform: translateY(-11px);
+                }
+            }
+        }
+    }
+}
+.background_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
