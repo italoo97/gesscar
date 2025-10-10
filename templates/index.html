@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-
+    {% load static %}
     <!--========= Required meta tags =========-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -11,18 +11,18 @@
 
     <title>GESSCAR</title>
 
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="images/x-icon">
+    <link rel="shortcut icon" href="{%static 'img/favicon.png' %}" type="images/x-icon">
 
     <!-- css include -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/odometer.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{%static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{%static 'css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/odometer.css' %}">
+    <link rel="stylesheet" href="{%static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{%static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{%static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{%static 'css/main.css' %}">
 </head>
 
 <body class="residential_solar">
@@ -58,8 +58,8 @@
             <div class="container-fluid p-0">
                 <div class="header__wrap ul_li_between">
                     <div class="header-logo">
-                        <a href="index.html" class="logo1"><img src="assets/img/logo/logo.svg" alt=""></a>
-                        <a href="index.html" class="logo2"><img src="assets/img/logo/logo-sticky.svg" alt=""></a>
+                        <a href="index.html" class="logo1"><img src="{% static 'img/logo/logo.svg' %}" alt=""></a>
+                        <a href="index.html" class="logo2"><img src="{% static 'img/logo/logo-sticky.svg' %}" alt=""></a>
                     </div>
                     <div class="main-menu__wrap  navbar navbar-expand-lg">
                         <nav class="main-menu collapse navbar-collapse">
@@ -102,7 +102,7 @@
                                 <div class="xb-header-menu-scroll">
                                     <div class="xb-menu-close xb-hide-xl xb-close"></div>
                                     <div class="xb-logo-mobile xb-hide-xl">
-                                    <a href="index.html" rel="home"><img src="assets/img/logo/logo-sticky.svg" alt=""></a></div>
+                                    <a href="index.html" rel="home"><img src="{% static 'img/logo/logo-sticky.svg' %}" alt=""></a></div>
                                     <div class="xb-header-mobile-search xb-hide-xl">
                                         <form role="search" action="#">
                                             <input type="text" placeholder="Search..." name="s" class="search-field">
@@ -150,7 +150,7 @@
                         </div>
                     </div>
                     <div class="header-contact d-none d-xl-block">
-                        <a href="tel:1123-456-7890" class="thm-btn residen-btn pd-gradient"><img src="assets/img/icon/call-white.svg" alt="">1123-456-7890</a>
+                        <a href="tel:1123-456-7890" class="thm-btn residen-btn pd-gradient"><img src="{% static 'img/icon/call-white.svg' %}" alt="">1123-456-7890</a>
                     </div>
                     <div class="header-bar-mobile side-menu d-lg-none">
                         <a class="xb-nav-mobile" href="javascript:void(0);">
@@ -166,7 +166,7 @@
     <!-- main area start -->
     <main>
         <!-- hero start -->
-        <section class="hero hero-style-one pos-rel bg_img" data-background="assets/img/bg/Section.png">
+        <section class="hero hero-style-one pos-rel bg_img" data-background="{% static 'img/bg/Section.png' %}">
             <div class="container">
                 <div class="xb-hero_content">
                     <h2 class="xb-title wow skewIn" data-wow-delay="0ms" data-wow-duration="800ms">Uma nova forma de gerir <span>locadoras e revendedoras</span></h2>
@@ -199,7 +199,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="xb-wcu-item wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">
                                 <div class="xb-item--icon">
-                                    <img src="assets/img/icon/wcu-icon01.svg" alt="">
+                                    <img src="{% static 'img/icon/wcu-icon01.svg' %}" alt="">
                                 </div>
                                 <div class="xb-item--holder">
                                     <h3 class="xb-item--title">CRM</h3>
@@ -210,7 +210,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="xb-wcu-item wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
                                 <div class="xb-item--icon">
-                                    <img src="assets/img/icon/wcu-icon02.svg" alt="">
+                                    <img src="{% static 'img/icon/wcu-icon02.svg' %}" alt="">
                                 </div>
                                 <div class="xb-item--holder">
                                     <h3 class="xb-item--title">Site</h3>
@@ -221,7 +221,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="xb-wcu-item wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
                                 <div class="xb-item--icon">
-                                    <img src="assets/img/icon/wcu-icon03.svg" alt="">
+                                    <img src="{% static 'img/icon/wcu-icon03.svg' %}" alt="">
                                 </div>
                                 <div class="xb-item--holder">
                                     <h3 class="xb-item--title">CEO</h3>
@@ -232,7 +232,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="xb-wcu-item wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">
                                 <div class="xb-item--icon">
-                                    <img src="assets/img/icon/wcu-icon04.svg" alt="">
+                                    <img src="{% static 'img/icon/wcu-icon04.svg' %}" alt="">
                                 </div>
                                 <div class="xb-item--holder">
                                     <h3 class="xb-item--title">Social</h3>
@@ -243,7 +243,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="xb-wcu-item wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
                                 <div class="xb-item--icon">
-                                    <img src="assets/img/icon/wcu-icon05.svg" alt="">
+                                    <img src="{% static 'img/icon/wcu-icon05.svg' %}" alt="">
                                 </div>
                                 <div class="xb-item--holder">
                                     <h3 class="xb-item--title">Gestão</h3>
@@ -254,7 +254,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="xb-wcu-item wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
                                 <div class="xb-item--icon">
-                                    <img src="assets/img/icon/wcu-icon06.svg" alt="">
+                                    <img src="{% static 'img/icon/wcu-icon06.svg' %}" alt="">
                                 </div>
                                 <div class="xb-item--holder">
                                     <h3 class="xb-item--title">Ideias e Projetos</h3>
@@ -281,7 +281,7 @@
                     <div class="row align-items-center mt-none-30">
                         <div class="col-lg-5 mt-30">
                             <div class="xb-about-img wow skewInImg" data-wow-delay="0ms" data-wow-duration="600ms">
-                                <img src="assets/img/about/about-img01.png" alt="">
+                                <img src="{% static 'img/about/about-img01.png' %}" alt="">
                             </div>
                         </div>
                         <div class="col-lg-7 mt-30">
@@ -328,7 +328,7 @@
                         <div class="process-images">
                             <div class="xb-process-image active">
                                 <div class="item-image">
-                                    <img src="assets/img/process/img01.png" alt="">
+                                    <img src="{% static 'img/process/img01.png' %}" alt="">
                                 </div>
                                 <div class="xb-holder">
                                     <p class="xb-content">
@@ -340,7 +340,7 @@
                             </div>
                             <div class="xb-process-image">
                                 <div class="item-image">
-                                    <img src="assets/img/process/img02.jpg" alt="">
+                                    <img src="{% static 'img/process/img02.jpg' %}" alt="">
                                 </div>
                                 <div class="xb-holder">
                                     <p class="xb-content">
@@ -352,7 +352,7 @@
                             </div>
                             <div class="xb-process-image">
                                 <div class="item-image">
-                                    <img src="assets/img/process/img03.jpg" alt="">
+                                    <img src="{% static 'img/process/img03.jpg' %}" alt="">
                                 </div>
                                 <div class="xb-holder">
                                     <p class="xb-content">
@@ -364,7 +364,7 @@
                             </div>
                             <div class="xb-process-image">
                                 <div class="item-image">
-                                    <img src="assets/img/process/img04.jpg" alt="">
+                                    <img src="{% static 'img/process/img04.jpg' %}" alt="">
                                 </div>
                                 <div class="xb-holder">
                                     <p class="xb-content">
@@ -376,7 +376,7 @@
                             </div>
                             <div class="xb-process-image">
                                 <div class="item-image">
-                                    <img src="assets/img/process/img05.jpg" alt="">
+                                    <img src="{% static 'img/process/img05.jpg' %}" alt="">
                                 </div>
                                 <div class="xb-holder">
                                     <p class="xb-content">
@@ -462,7 +462,7 @@
                             </div>
                             <div class="acc_body current">
                                 <div class="content">
-                                    <a href="service-details.html"><img src="assets/img/service/img01.jpg" alt=""></a>
+                                    <a href="service-details.html"><img src="{% static 'img/service/img01.jpg' %}" alt=""></a>
                                 </div>
                             </div>
                         </li>
@@ -480,7 +480,7 @@
                             </div>
                             <div class="acc_body">
                                 <div class="content">
-                                    <a href="service-details.html"><img src="assets/img/service/img02.jpg" alt=""></a>
+                                    <a href="service-details.html"><img src="{% static 'img/service/img02.jpg' %}" alt=""></a>
                                 </div>
                             </div>
                         </li>
@@ -498,7 +498,7 @@
                             </div>
                             <div class="acc_body">
                                 <div class="content">
-                                    <a href="service-details.html"><img src="assets/img/service/img03.jpg" alt=""></a>
+                                    <a href="service-details.html"><img src="{% static 'img/service/img03.jpg' %}" alt=""></a>
                                 </div>
                             </div>
                         </li>
@@ -516,7 +516,7 @@
                             </div>
                             <div class="acc_body">
                                 <div class="content">
-                                    <a href="service-details.html"><img src="assets/img/service/img04.jpg" alt=""></a>
+                                    <a href="service-details.html"><img src="{% static 'img/service/img04.jpg' %}" alt=""></a>
                                 </div>
                             </div>
                         </li>
@@ -537,7 +537,7 @@
                         <div class="swiper-slide">
                             <div class="xb-work-item">
                                 <div class="xb-item--img">
-                                    <img src="assets/img/work/img01.jpg" alt="">
+                                    <img src="{% static 'img/work/img01.jpg' %}" alt="">
                                 </div>
                                 <h3 class="xb-item--title">Design & Planning</h3>
                                 <div class="xb-item--holder">
@@ -549,7 +549,7 @@
                         <div class="swiper-slide">
                             <div class="xb-work-item">
                                 <div class="xb-item--img">
-                                    <img src="assets/img/work/img02.jpg" alt="">
+                                    <img src="{% static 'img/work/img02.jpg' %}" alt="">
                                 </div>
                                 <h3 class="xb-item--title">Roof Preparation</h3>
                                 <div class="xb-item--holder">
@@ -561,7 +561,7 @@
                         <div class="swiper-slide">
                             <div class="xb-work-item">
                                 <div class="xb-item--img">
-                                    <img src="assets/img/work/img03.jpg" alt="">
+                                    <img src="{% static 'img/work/img03.jpg' %}" alt="">
                                 </div>
                                 <h3 class="xb-item--title">Solar Panel Installation</h3>
                                 <div class="xb-item--holder">
@@ -573,7 +573,7 @@
                         <div class="swiper-slide">
                             <div class="xb-work-item">
                                 <div class="xb-item--img">
-                                    <img src="assets/img/work/img02.jpg" alt="">
+                                    <img src="{% static 'img/work/img02.jpg' %}" alt="">
                                 </div>
                                 <h3 class="xb-item--title">Roof Preparation</h3>
                                 <div class="xb-item--holder">
@@ -585,7 +585,7 @@
                         <div class="swiper-slide">
                             <div class="xb-work-item">
                                 <div class="xb-item--img">
-                                    <img src="assets/img/work/img03.jpg" alt="">
+                                    <img src="{% static 'img/work/img03.jpg' %}" alt="">
                                 </div>
                                 <h3 class="xb-item--title">Solar Panel Installation</h3>
                                 <div class="xb-item--holder">
@@ -687,7 +687,7 @@
         <!-- faq end -->
 
         <!-- contact start -->
-        <section class="contact pt-130 pb-130 bg_img" data-background="assets/img/bg/contact-bg.jpg">
+        <section class="contact pt-130 pb-130 bg_img" data-background="{% static 'img/bg/contact-bg.jpg' %}">
             <div class="container">
                 <div class="sec-title text-center mb-60">
                     <h2 class="xb-title wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">Agente Sua <span>Reunião </span>Conosco!</h2>
@@ -758,10 +758,10 @@
                 <div class="row mt-none-50">
                     <div class="col-lg-4 mt-50">
                         <div class="xb-newsletter">
-                            <div class="xb-item--logo"><a href="index.html"><img src="assets/img/logo/footer-logo.svg" alt=""></a></div>
+                            <div class="xb-item--logo"><a href="index.html"><img src="{% static 'img/logo/footer-logo.svg' %}" alt=""></a></div>
                             <p class="xb-item--content">We have served Dorset and the South of England for years, providing a high level of mechanical (plumbing), electrical and renewable service to a range of customers.</p>
                             <div class="xb-item--img wow xb-animetion-left" data-wow-delay="0ms" data-wow-duration="800ms">
-                                <img src="assets/img/footer/solar-tree.png" alt="image">
+                                <img src="{% static 'img/footer/solar-tree.png' %}" alt="image">
                             </div>
                         </div>
                     </div>
@@ -793,7 +793,7 @@
                                 <div class="xb-item--holder">
                                     <p class="xb-item--content">For more information please get in touch below or via our form</p>
                                     <h3 class="xb-item--contact">
-                                        <span class="xb-item--icon"><img src="assets/img/icon/call-white-icon.svg" alt=""></span>
+                                        <span class="xb-item--icon"><img src="{% static 'img/icon/call-white-icon.svg' %}" alt=""></span>
                                         <a href="tel:01747445509">01747 445 509</a> 
                                     </h3>
                                     <p class="xb-item--address">Unit 9, Melbury Business Park, <br> West Melbury,Shaftesbury, <br> SP7 0AF</p>
@@ -850,25 +850,25 @@
 </div>
 
 <!-- jquery include -->
-<script src="assets/js/jquery-3.7.1.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/swiper.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/appear.js"></script>
-<script src="assets/js/parallax-scroll.js"></script>
-<script src="assets/js/isotope.pkgd.min.js"></script>
-<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="assets/js/odometer.min.js"></script>
-<script src="assets/js/jquery.nice-select.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/jqueryui.js"></script>
-<script src="assets/js/parallaxie.js"></script>
-<script src="assets/js/easing.min.js"></script>
-<script src="assets/js/scrollspy.js"></script>
-<script src="assets/js/splitType.js"></script>
-<script src="assets/js/gsap.min.js"></script>
-<script src="assets/js/ScrollTrigger.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/swiper.min.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/appear.js' %}"></script>
+<script src="{% static 'js/parallax-scroll.js' %}"></script>
+<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'js/odometer.min.js' %}"></script>
+<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/jqueryui.js' %}"></script>
+<script src="{% static 'js/parallaxie.js' %}"></script>
+<script src="{% static 'js/easing.min.js' %}"></script>
+<script src="{% static 'js/scrollspy.js' %}"></script>
+<script src="{% static 'js/splitType.js' %}"></script>
+<script src="{% static 'js/gsap.min.js' %}"></script>
+<script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 
 
 
