@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.dispatch import receiver
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
@@ -13,3 +12,11 @@ class Profile(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.surname}" if self.first_name else self.user.username
+    
+class Contact(models.Model):
+    name = models.CharField(max_length=50, blank=False, null=True)
+    email = models.EmailField(blank=False, null=False)
+    whatsapp = models.CharField(max_length=20, blank=False, null=False)
+    enterprise = models.CharField(max_length=50, blank=False, null=False)
+    instagram = models.CharField(max_length=50, blank=True, null=True)
+    website = models.URLField(max_length=200, blank=True, null=True, verbose_name='Site')

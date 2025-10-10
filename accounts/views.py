@@ -4,6 +4,31 @@ from django.contrib.auth import update_session_auth_hash, authenticate, login, l
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from accounts.forms import ProfileForm
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+from .forms import ContactForm
+from .models import Contact
+from django.views.generic import CreateView
+from django.urls import reverse_lazy
+
+@method_decorator(csrf_exempt, name='dispatch')
+class ProcessarFormularioView(CreateView):
+    model = Contact
+    form_class = ContactForm
+    template_name = 'index.html'
+    success_url = reverse_lazy('index')
+    
+    def form_valid(self, form):
+        form.save()
+        return JsonResponse({'success': True, 'message': 'Formulário enviado com sucesso!'})
+    
+    def form_invalid(self, form):
+        return JsonResponse({
+            'success': False, 
+            'errors': form.errors,
+            'message': 'Por favor, corrija os erros no formulário.'
+        })
 
 def auth_page_view(request):
     login_form = AuthenticationForm()
@@ -38,7 +63,7 @@ def auth_page_view(request):
         "register_form": register_form,
         "active_tab": active_tab,
     }
-    return render(request, "index.html", context)
+    return render(request, "logindinamyc.html", context)
 
 @login_required
 def change_view(request):

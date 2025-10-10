@@ -14,7 +14,6 @@ class CarModelForm(forms.ModelForm):
         return value
     
 class CarBrandForm(forms.ModelForm):
-
     class Meta:
         model = Brand
         fields = '__all__'

@@ -58,16 +58,16 @@
             <div class="container-fluid p-0">
                 <div class="header__wrap ul_li_between">
                     <div class="header-logo">
-                        <a href="index.html" class="logo1"><img src="{% static 'img/logo/logo.svg' %}" alt=""></a>
-                        <a href="index.html" class="logo2"><img src="{% static 'img/logo/logo-sticky.svg' %}" alt=""></a>
+                        <a href="" class="logo1"><img src="{% static 'img/logo/logo.svg' %}" alt=""></a>
+                        <a href="" class="logo2"><img src="{% static 'img/logo/logo-sticky.svg' %}" alt=""></a>
                     </div>
                     <div class="main-menu__wrap  navbar navbar-expand-lg">
                         <nav class="main-menu collapse navbar-collapse">
                             <ul>
                                 <li class="menu-item-has-children active">
-                                    <a href="index.html"><span>Home</span></a>
+                                    <a href=""><span>Home</span></a>
                                     <ul class="submenu">
-                                        <li class="active"><a href="index.html"><span>residential solar</span></a></li>
+                                        <li class="active"><a href=""><span>residential solar</span></a></li>
                                         <li><a href="commercial-solar.html"><span>commercial solar</span></a></li>
                                     </ul>
                                 </li>
@@ -102,7 +102,7 @@
                                 <div class="xb-header-menu-scroll">
                                     <div class="xb-menu-close xb-hide-xl xb-close"></div>
                                     <div class="xb-logo-mobile xb-hide-xl">
-                                    <a href="index.html" rel="home"><img src="{% static 'img/logo/logo-sticky.svg' %}" alt=""></a></div>
+                                    <a href="" rel="home"><img src="{% static 'img/logo/logo-sticky.svg' %}" alt=""></a></div>
                                     <div class="xb-header-mobile-search xb-hide-xl">
                                         <form role="search" action="#">
                                             <input type="text" placeholder="Search..." name="s" class="search-field">
@@ -114,7 +114,7 @@
                                             <li class="menu-item menu-item-has-children">
                                                 <a href="#"><span>Home</span></a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="index.html"><span>residential solar</span></a></li>
+                                                    <li><a href=""><span>residential solar</span></a></li>
                                                     <li><a href="commercial-solar.html"><span>commercial-solar</span></a></li>
                                                 </ul>
                                             </li>
@@ -149,9 +149,13 @@
                             <div class="xb-header-menu-backdrop"></div>
                         </div>
                     </div>
-                    <div class="header-contact d-none d-xl-block">
-                        <a href="tel:1123-456-7890" class="thm-btn residen-btn pd-gradient"><img src="{% static 'img/icon/call-white.svg' %}" alt="">1123-456-7890</a>
-                    </div>
+                        <ul>
+                            {% if not user.is_authenticated %}
+                                <li><a href="{% url 'login' %}">Login</a></li>
+                            {% endif %}
+                        </ul>
+
+
                     <div class="header-bar-mobile side-menu d-lg-none">
                         <a class="xb-nav-mobile" href="javascript:void(0);">
                             <i class="far fa-bars"></i>
@@ -695,51 +699,45 @@
                 <div class="row justify-content-center wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
                     <div class="col-lg-10">
                         <div class="contact-form">
-                            <form action="#">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="input-field">
-                                            <label for="name">Seu Nome *</label>
-                                            <input type="text" name="text" id="name">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="input-field">
-                                            <label for="email">Seu Email *</label>
-                                            <input type="email" name="text" id="email">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="input-field">
-                                            <label for="number">Whatsapp *</label>
-                                            <input type="tel" name="tel" id="number">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="input-field">
-                                            <label for="code">Nome da sua Empresa*</label>
-                                            <input type="text" name="code" id="code">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="input-field">
-                                            <label for="code">Instagram da Empresa</label>
-                                            <input type="text" name="code" id="code">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="input-field">
-                                            <label for="code">Site da Sua Empresa</label>
-                                            <input type="text" name="code" id="code">
-                                        </div>
-                                    </div>
-                                        <div class="content">
-                                            Entraremos em Contato em Até 72hs</a>
-                                    </div>
-                                    <div class="contact-btn mt-35 text-center">
-                                        <button type="submit" class="thm-btn residen-btn">ENVIAR <i class="fa-light fa-angle-right"></i></button>
+                            <form id="meuFormulario" method="POST" action="{% url 'processar-formulario' %}">
+                                {% csrf_token %}
+                                <div class="col-lg-6">
+                                    <div class="input-field">
+                                        <label for="name">Seu Nome *</label>
+                                        <input type="text" name="name" id="name" required>
                                     </div>
                                 </div>
+                                <div class="col-lg-6">
+                                    <div class="input-field">
+                                        <label for="email">Seu Email *</label>
+                                        <input type="email" name="email" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="input-field">
+                                        <label for="whatsapp">Whatsapp *</label>
+                                        <input type="tel" name="whatsapp" id="whatsapp" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="input-field">
+                                        <label for="enterprise">Nome da sua Empresa *</label>
+                                        <input type="text" name="enterprise" id="enterprise" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="input-field">
+                                        <label for="instagram">Instagram da Empresa</label>
+                                        <input type="text" name="instagram" id="instagram">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="input-field">
+                                        <label for="website">Site da Sua Empresa</label>
+                                        <input type="text" name="website" id="website">
+                                    </div>
+                                </div>
+                                <button type="submit">Enviar</button>
                             </form>
                         </div>
                     </div>
@@ -758,7 +756,7 @@
                 <div class="row mt-none-50">
                     <div class="col-lg-4 mt-50">
                         <div class="xb-newsletter">
-                            <div class="xb-item--logo"><a href="index.html"><img src="{% static 'img/logo/footer-logo.svg' %}" alt=""></a></div>
+                            <div class="xb-item--logo"><a href=""><img src="{% static 'img/logo/footer-logo.svg' %}" alt=""></a></div>
                             <p class="xb-item--content">We have served Dorset and the South of England for years, providing a high level of mechanical (plumbing), electrical and renewable service to a range of customers.</p>
                             <div class="xb-item--img wow xb-animetion-left" data-wow-delay="0ms" data-wow-duration="800ms">
                                 <img src="{% static 'img/footer/solar-tree.png' %}" alt="image">
@@ -834,7 +832,7 @@
         <div class="xb-footer_bottom">
             <div class="container">
                 <div class="xb-footer-bottom-inner ul_li_between">
-                    <P>© 2025 <a href="index.html">Solara</a> — All Rights Reserved</P>
+                    <P>© 2025 <a href="">Solara</a> — All Rights Reserved</P>
                     <ul class="list-unstyled ul_li">
                         <li><a href="#!">Termos & Condiçoes</a></li>
                         <li><a href="#!">Camlin Privacy Policy</a></li>
@@ -869,9 +867,10 @@
 <script src="{% static 'js/gsap.min.js' %}"></script>
 <script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/form_index.js' %}"></script>
 
 
-
+{% include 'chat_widget.html' %}
 </body>
 
 </html>

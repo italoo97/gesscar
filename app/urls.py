@@ -18,9 +18,14 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from cars.views import index
+from accounts.views import auth_page_view, ProcessarFormularioView
+from cars import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    path('', ProcessarFormularioView.as_view(), name='index'),
+    path('api/chat/', views.chat_api, name='chat_api'),
+    path('login', auth_page_view, name='login'),
+    path('register', auth_page_view, name='register'),
+    path('processar-formulario', ProcessarFormularioView.as_view(), name='processar-formulario'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
