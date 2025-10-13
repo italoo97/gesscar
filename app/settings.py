@@ -24,9 +24,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-qjtxcduqei-anu-nwqh*=ck+6ig#^li*!8tj_8z4mbqqyczzsd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = []
+if DEBUG:
+    ALLOWED_HOSTS = ['*']
+else:
+    ALLOWED_HOSTS = [
+        'gesscar.discloud.app',
+        # Adicione outros domínios se necessário
+    ]
 
 LOGIN_URL = 'login'
 
