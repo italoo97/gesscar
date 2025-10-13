@@ -3,7 +3,7 @@ document.getElementById('meuFormulario').addEventListener('submit', function(e) 
 
     const formData = new FormData(this);
 
-    fetch("{% url 'processar-formulario' %}", {
+    fetch(FORM_URL, {
         method: 'POST',
         body: formData,
         headers: {
