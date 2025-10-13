@@ -14,6 +14,12 @@ from openai_api.client import get_ai_response, get_fallback_response
 def index(request):
 	return render(request, 'index.html')
 
+def privacy_view(request):
+	return render(request, 'privacy.html')
+
+def service_view(request):
+	return render(request, 'service-details.html')
+
 class CarListView(ListView):
 	model = Car
 	template_name = 'cars.html'

@@ -2,8 +2,7 @@
 <html lang="zxx">
 
 <head>
-
-    <!--========= Required meta tags =========-->
+    {% load static %}
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
@@ -11,18 +10,18 @@
 
     <title>Residential Solar Solutions HTML Template</title>
 
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="images/x-icon">
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="images/x-icon">
 
     <!-- css include -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/odometer.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/odometer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 
 <body class="inner-page-style">
@@ -58,43 +57,43 @@
             <div class="container-fluid p-0">
                 <div class="header__wrap ul_li_between">
                     <div class="header-logo">
-                        <a href="index.html" class="logo1"><img src="assets/img/logo/logo.svg" alt=""></a>
-                        <a href="index.html" class="logo2"><img src="assets/img/logo/logo-sticky.svg" alt=""></a>
+                        <a href="index" class="logo1"><img src="{% static 'img/logo/logo.svg' %}" alt=""></a>
+                        <a href="index" class="logo2"><img src="{% static 'img/logo/logo-sticky.svg' %}" alt=""></a>
                     </div>
                     <div class="main-menu__wrap  navbar navbar-expand-lg">
                         <nav class="main-menu collapse navbar-collapse">
                             <ul>
                                 <li class="menu-item-has-children">
-                                    <a href="index.html"><span>Home</span></a>
+                                    <a href="index"><span>Home</span></a>
                                     <ul class="submenu">
-                                        <li><a href="index.html"><span>residential solar</span></a></li>
-                                        <li><a href="commercial-solar.html"><span>commercial solar</span></a></li>
+                                        <li><a href="index"><span>residential solar</span></a></li>
+                                        <li><a href="commercial-solar"><span>commercial solar</span></a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="#!"><span>Pages</span></a>
                                     <ul class="submenu">
-                                        <li><a href="about.html"><span>about us</span></a></li>
-                                        <li><a href="service-details.html"><span>service details</span></a></li>
-                                        <li><a href="terms.html"><span>terms & conditions</span></a></li>
-                                        <li><a href="privacy.html"><span>privacy policy</span></a></li>
+                                        <li><a href="about"><span>about us</span></a></li>
+                                        <li><a href="service-details"><span>service details</span></a></li>
+                                        <li><a href="terms"><span>terms & conditions</span></a></li>
+                                        <li><a href="privacy"><span>privacy policy</span></a></li>
                                     </ul>   
                                 </li> 
                                 <li class="menu-item-has-children active">
-                                    <a href="project.html"><span>Projects</span></a>
+                                    <a href="project"><span>Projects</span></a>
                                     <ul class="submenu">
-                                        <li class="active"><a href="project.html"><span>Projects</span></a></li>
-                                        <li><a href="project-details.html"><span>Project details</span></a></li>
+                                        <li class="active"><a href="project"><span>Projects</span></a></li>
+                                        <li><a href="project-details"><span>Project details</span></a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="blog.html"><span>Blog</span></a>
+                                    <a href="blog"><span>Blog</span></a>
                                     <ul class="submenu">
-                                        <li><a href="blog.html"><span>blog</span></a></li>
-                                        <li><a href="blog-details.html"><span>blog details</span></a></li>
+                                        <li><a href="blog"><span>blog</span></a></li>
+                                        <li><a href="blog-details"><span>blog details</span></a></li>
                                     </ul> 
                                 </li>
-                                <li><a href="contact.html"><span>Contact</span></a></li>
+                                <li><a href="contact"><span>Contact</span></a></li>
                             </ul>
                         </nav>
                         <div class="xb-header-wrap">
@@ -102,7 +101,7 @@
                                 <div class="xb-header-menu-scroll">
                                     <div class="xb-menu-close xb-hide-xl xb-close"></div>
                                     <div class="xb-logo-mobile xb-hide-xl">
-                                    <a href="index.html" rel="home"><img src="assets/img/logo/logo-sticky.svg" alt=""></a></div>
+                                    <a href="index" rel="home"><img src="{% static 'img/logo/logo-sticky.svg' %}" alt=""></a></div>
                                     <div class="xb-header-mobile-search xb-hide-xl">
                                         <form role="search" action="#">
                                             <input type="text" placeholder="Search..." name="s" class="search-field">
@@ -114,34 +113,34 @@
                                             <li class="menu-item menu-item-has-children">
                                                 <a href="#"><span>Home</span></a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="index.html"><span>residential solar</span></a></li>
-                                                    <li><a href="commercial-solar.html"><span>commercial-solar</span></a></li>
+                                                    <li><a href="index"><span>residential solar</span></a></li>
+                                                    <li><a href="commercial-solar"><span>commercial-solar</span></a></li>
                                                 </ul>
                                             </li>
                                             <li class="menu-item menu-item-has-children">
                                                 <a href="#!"><span>Pages</span></a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="about.html"><span>about us</span></a></li>
-                                                    <li><a href="service-details.html"><span>service details</span></a></li>
-                                                    <li><a href="terms.html"><span>terms & conditions</span></a></li>
-                                                    <li><a href="privacy.html"><span>privacy policy</span></a></li>
+                                                    <li><a href="about"><span>about us</span></a></li>
+                                                    <li><a href="service-details"><span>service details</span></a></li>
+                                                    <li><a href="terms"><span>terms & conditions</span></a></li>
+                                                    <li><a href="privacy"><span>privacy policy</span></a></li>
                                                 </ul>
                                             </li>
                                             <li class="menu-item menu-item-has-children">
-                                                <a href="project.html"><span>Projects</span></a>
+                                                <a href="project"><span>Projects</span></a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="project.html"><span>Projects</span></a></li>
-                                                    <li class="active"><a href="project-details.html"><span>Project details</span></a></li>
+                                                    <li><a href="project"><span>Projects</span></a></li>
+                                                    <li class="active"><a href="project-details"><span>Project details</span></a></li>
                                                 </ul>
                                             </li>
                                             <li class="menu-item menu-item-has-children">
-                                                <a href="blog.html"><span>blog</span></a>
+                                                <a href="blog"><span>blog</span></a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="blog.html"><span>blog</span></a></li>
-                                                    <li><a href="blog-details.html"><span>blog details</span></a></li>
+                                                    <li><a href="blog"><span>blog</span></a></li>
+                                                    <li><a href="blog-details"><span>blog details</span></a></li>
                                                 </ul> 
                                             </li>
-                                            <li><a href="contact.html"><span>Contact</span></a></li>
+                                            <li><a href="contact"><span>Contact</span></a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -173,12 +172,12 @@
     <!-- main area start -->
     <main>
         <!-- hero start -->
-        <section class="breadcrumb pos-rel bg_img" data-background="assets/img/bg/inner-home_bg.jpg">
+        <section class="breadcrumb pos-rel bg_img" data-background="{% static 'img/bg/inner-home_bg.jpg' %}">
             <div class="container">
                 <div class="breadcrumb__content">
                     <h2 class="breadcrumb__title">Project</h2>
                     <ul class="breadcrumb__list clearfix">
-                        <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                        <li class="breadcrumb-item"><a href="index">home</a></li>
                         <li class="breadcrumb-item">Project</li>
                     </ul>
                 </div>
@@ -199,38 +198,38 @@
                     <div class="row grid">
                         <div class="col-lg-4 col-md-6 grid-item cat1 cat2">
                             <div class="project-single-item mt-40">
-                                <a href="project-details.html" class="image"><img src="assets/img/project/img_01.jpg" alt="img"></a>
-                                <h3><a href="project-details.html">Design & Planning</a></h3>
+                                <a href="project-details" class="image"><img src="{% static 'img/project/img_01.jpg' %}" alt="img"></a>
+                                <h3><a href="project-details">Design & Planning</a></h3>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 grid-item cat2 cat3">
                             <div class="project-single-item mt-40">
-                                <a href="project-details.html" class="image"><img src="assets/img/project/img_02.jpg" alt="img"></a>
-                                <h3><a href="project-details.html">Roof Preparation</a></h3>
+                                <a href="project-details" class="image"><img src="{% static 'img/project/img_02.jpg' %}" alt="img"></a>
+                                <h3><a href="project-details">Roof Preparation</a></h3>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 grid-item cat1 cat3">
                             <div class="project-single-item mt-40">
-                                <a href="project-details.html" class="image"><img src="assets/img/project/img_03.jpg" alt="img"></a>
-                                <h3><a href="project-details.html">Solar Panel Installation</a></h3>
+                                <a href="project-details" class="image"><img src="{% static 'img/project/img_03.jpg' %}" alt="img"></a>
+                                <h3><a href="project-details">Solar Panel Installation</a></h3>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 grid-item cat2 cat3">
                             <div class="project-single-item mt-40">
-                                <a href="project-details.html" class="image"><img src="assets/img/project/img_04.jpg" alt="img"></a>
-                                <h3><a href="project-details.html">Residential Solar Panel</a></h3>
+                                <a href="project-details" class="image"><img src="{% static 'img/project/img_04.jpg' %}" alt="img"></a>
+                                <h3><a href="project-details">Residential Solar Panel</a></h3>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 grid-item cat1 cat2">
                             <div class="project-single-item mt-40">
-                                <a href="project-details.html" class="image"><img src="assets/img/project/img_05.jpg" alt="img"></a>
-                                <h3><a href="project-details.html">Repairing Solar Panel</a></h3>
+                                <a href="project-details" class="image"><img src="{% static 'img/project/img_05.jpg' %}" alt="img"></a>
+                                <h3><a href="project-details">Repairing Solar Panel</a></h3>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 grid-item cat2 cat3">
                             <div class="project-single-item mt-40">
-                                <a href="project-details.html" class="image"><img src="assets/img/project/img_06.jpg" alt="img"></a>
-                                <h3><a href="project-details.html">inspecting a solar cell</a></h3>
+                                <a href="project-details" class="image"><img src="{% static 'img/project/img_06.jpg' %}" alt="img"></a>
+                                <h3><a href="project-details">inspecting a solar cell</a></h3>
                             </div>
                         </div>
                     </div>
@@ -240,7 +239,7 @@
         <!-- portfolio end -->
 
         <!-- contact start -->
-        <section class="contact pt-130 pb-130 bg_img" data-background="assets/img/bg/contact-bg.jpg">
+        <section class="contact pt-130 pb-130 bg_img" data-background="{% static 'img/bg/contact-bg.jpg' %}">
             <div class="container">
                 <div class="sec-title text-center mb-60">
                     <h2 class="xb-title">Need a quotation? Please submit <br> an <span>enquiry below</span></h2>
@@ -302,10 +301,10 @@
                 <div class="row mt-none-50">
                     <div class="col-lg-4 mt-50">
                         <div class="xb-newsletter">
-                            <div class="xb-item--logo"><a href="index.html"><img src="assets/img/logo/footer-logo.svg" alt=""></a></div>
+                            <div class="xb-item--logo"><a href="index"><img src="{% static 'img/logo/footer-logo.svg' %}" alt=""></a></div>
                             <p class="xb-item--content">We have served Dorset and the South of England for years, providing a high level of mechanical (plumbing), electrical and renewable service to a range of customers.</p>
                             <div class="xb-item--img">
-                                <img src="assets/img/footer/solar-tree.png" alt="image">
+                                <img src="{% static 'img/footer/solar-tree.png' %}" alt="image">
                             </div>
                         </div>
                     </div>
@@ -337,7 +336,7 @@
                                 <div class="xb-item--holder">
                                     <p class="xb-item--content">For more information please get in touch below or via our form</p>
                                     <h3 class="xb-item--contact">
-                                        <span class="xb-item--icon"><img src="assets/img/icon/call-white-icon.svg" alt=""></span>
+                                        <span class="xb-item--icon"><img src="{% static 'img/icon/call-white-icon.svg' %}" alt=""></span>
                                         <a href="tel:01747445509">01747 445 509</a> 
                                     </h3>
                                     <p class="xb-item--address">Unit 9, Melbury Business Park, <br> West Melbury,Shaftesbury, <br> SP7 0AF</p>
@@ -378,7 +377,7 @@
         <div class="xb-footer_bottom">
             <div class="container">
                 <div class="xb-footer-bottom-inner ul_li_between">
-                    <P>© 2025 <a href="index.html">Solara</a> — All Rights Reserved</P>
+                    <P>© 2025 <a href="index">Solara</a> — All Rights Reserved</P>
                     <ul class="list-unstyled ul_li">
                         <li><a href="#!">Terms & Conditions</a></li>
                         <li><a href="#!">Camlin Privacy Policy</a></li>
@@ -396,25 +395,25 @@
 </div>
 
 <!-- jquery include -->
-<script src="assets/js/jquery-3.7.1.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/swiper.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/appear.js"></script>
-<script src="assets/js/parallax-scroll.js"></script>
-<script src="assets/js/isotope.pkgd.min.js"></script>
-<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="assets/js/odometer.min.js"></script>
-<script src="assets/js/jquery.nice-select.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/jqueryui.js"></script>
-<script src="assets/js/parallaxie.js"></script>
-<script src="assets/js/easing.min.js"></script>
-<script src="assets/js/scrollspy.js"></script>
-<script src="assets/js/splitType.js"></script>
-<script src="assets/js/gsap.min.js"></script>
-<script src="assets/js/ScrollTrigger.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/swiper.min.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/appear.js' %}"></script>
+<script src="{% static 'js/parallax-scroll.js' %}"></script>
+<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'js/odometer.min.js' %}"></script>
+<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/jqueryui.js' %}"></script>
+<script src="{% static 'js/parallaxie.js' %}"></script>
+<script src="{% static 'js/easing.min.js' %}"></script>
+<script src="{% static 'js/scrollspy.js' %}"></script>
+<script src="{% static 'js/splitType.js' %}"></script>
+<script src="{% static 'js/gsap.min.js' %}"></script>
+<script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 
 
 </body>

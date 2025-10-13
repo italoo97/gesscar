@@ -98,4 +98,28 @@ def edit_profile_view(request):
 		profile_form = ProfileForm()
 	return render(request, 'editprofile.html', {'profile_form': profile_form})
 
+@method_decorator(csrf_exempt, name='dispatch')
+class FormularioContactView(CreateView):
+    model = Contact
+    form_class = ContactForm
+    template_name = 'contact.html'
+    success_url = reverse_lazy('contact')
+    
+    def form_valid(self, form):
+        form.save()
+        return JsonResponse({'success': True, 'message': 'Formulário enviado com sucesso!'})
+    
+    def form_invalid(self, form):
+        return JsonResponse({
+            'success': False, 
+            'errors': form.errors,
+            'message': 'Por favor, corrija os erros no formulário.'
+        })
+    
+def project_view(request):
+	return render(request, 'project.html')
+
+def project_details_view(request):
+	return render(request, 'project-details.html')
+
 
