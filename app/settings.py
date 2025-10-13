@@ -61,6 +61,11 @@ MIDDLEWARE = [
     'analytics.middleware.AnalyticsMiddleware',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://gesscar.discloud.app',
+    'http://gesscar.discloud.app',
+]
+
 ROOT_URLCONF = 'app.urls'
 
 TEMPLATES = [
