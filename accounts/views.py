@@ -11,24 +11,31 @@ from .forms import ContactForm
 from .models import Contact
 from django.views.generic import CreateView
 from django.urls import reverse_lazy
+from django.views import View
 
 @method_decorator(csrf_exempt, name='dispatch')
-class ProcessarFormularioView(CreateView):
-    model = Contact
-    form_class = ContactForm
-    template_name = 'index.html'
-    success_url = reverse_lazy('index')
-    
-    def form_valid(self, form):
-        form.save()
-        return JsonResponse({'success': True, 'message': 'Formulário enviado com sucesso!'})
-    
-    def form_invalid(self, form):
-        return JsonResponse({
-            'success': False, 
-            'errors': form.errors,
-            'message': 'Por favor, corrija os erros no formulário.'
-        })
+class ProcessarFormularioView(View):
+    def post(self, request, *args, **kwargs):
+        print("POST data:", dict(request.POST))
+        
+        form = ContactForm(request.POST)
+        
+        if form.is_valid():
+            contact = form.save()
+            print(f"Contato salvo: {contact}")
+            
+            return JsonResponse({
+                'success': True, 
+                'message': 'Formulário enviado com sucesso!',
+                'id': contact.id
+            })
+        else:
+            print("Erros do formulário:", form.errors)
+            return JsonResponse({
+                'success': False, 
+                'errors': {k: v[0] for k, v in form.errors.items()},
+                'message': 'Por favor, corrija os erros no formulário.'
+            }, status=400)
 
 def auth_page_view(request):
     login_form = AuthenticationForm()
