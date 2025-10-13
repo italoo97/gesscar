@@ -31,7 +31,9 @@ if DEBUG:
 else:
     ALLOWED_HOSTS = [
         'gesscar.discloud.app',
-        # Adicione outros domínios se necessário
+    'localhost',
+    '127.0.0.1',
+    '0.0.0.0',
     ]
 
 LOGIN_URL = 'login'
