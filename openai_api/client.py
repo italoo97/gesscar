@@ -9,7 +9,9 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 GEMINI_KEY = os.getenv('GEMINI_KEY')
 
 client = OpenAI(api_key=OPENAI_API_KEY)
-client2 = genai.configure(api_key=GEMINI_KEY)
+genai.configure(api_key=GEMINI_KEY)
+
+gemini_model = genai.GenerativeModel("gemini-2.5-flash")
 
 def get_car_ai(model, brand, model_year):   
     message = ''''Faça uma descrição atrativa para o carro {} {} {} , Utilize apenas 250 caracteres que convencem o cliente.'''
@@ -27,10 +29,7 @@ def get_car_ai(model, brand, model_year):
         )
         return response.choices[0].message.content
     except Exception as e:
-        response = client2.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=message
-        )
+        response = gemini_model.generate_content(message)
         return response.text
     
 def get_ai_response(prompt, provider='chatgpt'):
@@ -67,10 +66,7 @@ def get_chatgpt_response(prompt):
 
 def get_gemini_response(prompt):
     message = f"Responda como um assistente virtual de concessionária: {prompt}"
-    response = client2.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=message
-    )
+    response = gemini_model.generate_content(message)
     return response.text
 
 def get_fallback_response(user_message):
