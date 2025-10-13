@@ -700,52 +700,50 @@
                 <div class="row justify-content-center wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
                     <div class="col-lg-10">
                         <div class="contact-form">
-                            <div class="row">
-                                <form id="meuFormulario" method="POST" action="{% url 'processar-formulario' %}">
-                                    {% csrf_token %}
-                                    <div class="col-lg-6">
-                                        <div class="input-field">
-                                            <label for="name">Seu Nome *</label>
-                                            <input type="text" name="name" id="name" required>
-                                        </div>
+                            <form id="meuFormulario" method="POST" action="{% url 'processar-formulario' %}">
+                                {% csrf_token %}
+                                <div class="col-lg-6">
+                                    <div class="input-field">
+                                        <label for="name">Seu Nome *</label>
+                                        <input type="text" name="name" id="name" required>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="input-field">
-                                            <label for="email">Seu Email *</label>
-                                            <input type="email" name="email" id="email" required>
-                                        </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-field">
+                                        <label for="email">Seu Email *</label>
+                                        <input type="email" name="email" id="email" required>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="input-field">
-                                            <label for="whatsapp">Whatsapp *</label>
-                                            <input type="tel" name="whatsapp" id="whatsapp" required>
-                                        </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="input-field">
+                                        <label for="whatsapp">Whatsapp *</label>
+                                        <input type="tel" name="whatsapp" id="whatsapp" required>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="input-field">
-                                            <label for="enterprise">Nome da sua Empresa *</label>
-                                            <input type="text" name="enterprise" id="enterprise" required>
-                                        </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="input-field">
+                                        <label for="enterprise">Nome da sua Empresa *</label>
+                                        <input type="text" name="enterprise" id="enterprise" required>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="input-field">
-                                            <label for="instagram">Instagram da Empresa</label>
-                                            <input type="text" name="instagram" id="instagram">
-                                        </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="input-field">
+                                        <label for="instagram">Instagram da Empresa</label>
+                                        <input type="text" name="instagram" id="instagram">
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="input-field">
-                                            <label for="website">Site da Sua Empresa</label>
-                                            <input type="text" name="website" id="website">
-                                        </div>
-                                    </div>   
-                                    <div class="col-lg-12">
-                                        <div class="input-field">
-                                            <button type="submit" class="default-btn">Enviar</button>
-                                        </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="input-field">
+                                        <label for="website">Site da Sua Empresa</label>
+                                        <input type="text" name="website" id="website">
                                     </div>
-                                </form>
-                            </div>
+                                </div>   
+                                <div class="col-lg-12">
+                                    <div class="input-field text-center">
+                                        <button type="submit" class="default-btn">Enviar</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
