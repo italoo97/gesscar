@@ -15,7 +15,13 @@ from django.views import View
 
 @method_decorator(csrf_exempt, name='dispatch')
 class ProcessarFormularioView(View):
+    def get(self, request, *args, **kwargs):
+        # Para exibir o formulário HTML
+        form = ContactForm()
+        return render(request, 'index.html', {'form': form})
+    
     def post(self, request, *args, **kwargs):
+        # Log para debug
         print("POST data:", dict(request.POST))
         
         form = ContactForm(request.POST)
