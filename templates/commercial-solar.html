@@ -2,8 +2,7 @@
 <html lang="zxx">
 
 <head>
-
-    <!--========= Required meta tags =========-->
+    {% load static %}
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
@@ -11,18 +10,18 @@
 
     <title>Residential Solar Solutions HTML Template</title>
 
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="images/x-icon">
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="images/x-icon">
 
     <!-- css include -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/odometer.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/odometer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 
 <body class="commercial_solar">
@@ -59,43 +58,43 @@
             <div class="container-fluid p-0">
                 <div class="header__wrap ul_li_between">
                     <div class="header-logo">
-                        <a href="index.html" class="logo1"><img src="assets/img/logo/logo-two.svg" alt=""></a>
-                        <a href="index.html" class="logo2"><img src="assets/img/logo/logo-sticky.svg" alt=""></a>
+                        <a href="" class="logo1"><img src="{% static 'img/logo/logo-two.svg' %}" alt=""></a>
+                        <a href="" class="logo2"><img src="{% static 'img/logo/logo-sticky.svg' %}" alt=""></a>
                     </div>
                     <div class="main-menu__wrap  navbar navbar-expand-lg">
                         <nav class="main-menu collapse navbar-collapse">
                             <ul>
                                 <li class="menu-item-has-children active">
-                                    <a href="index.html"><span>Home</span></a>
+                                    <a href=""><span>Home</span></a>
                                     <ul class="submenu">
-                                        <li><a href="index.html"><span>residential solar</span></a></li>
-                                        <li class="active"><a href="commercial-solar.html"><span>commercial solar</span></a></li>
+                                        <li><a href=""><span>residential solar</span></a></li>
+                                        <li class="active"><a href="commercial-solar"><span>commercial solar</span></a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="#!"><span>Pages</span></a>
                                     <ul class="submenu">
-                                        <li><a href="about.html"><span>about us</span></a></li>
-                                        <li><a href="service-details.html"><span>service details</span></a></li>
-                                        <li><a href="terms.html"><span>terms & conditions</span></a></li>
-                                        <li><a href="privacy.html"><span>privacy policy</span></a></li>
+                                        <li><a href="about"><span>about us</span></a></li>
+                                        <li><a href="service-details"><span>service details</span></a></li>
+                                        <li><a href="terms"><span>terms & conditions</span></a></li>
+                                        <li><a href="privacy"><span>privacy policy</span></a></li>
                                     </ul>   
                                 </li> 
                                 <li class="menu-item-has-children">
-                                    <a href="project.html"><span>Projects</span></a>
+                                    <a href="project"><span>Projects</span></a>
                                     <ul class="submenu">
-                                        <li><a href="project.html"><span>Projects</span></a></li>
-                                        <li><a href="project-details.html"><span>Project details</span></a></li>
+                                        <li><a href="project"><span>Projects</span></a></li>
+                                        <li><a href="project-details"><span>Project details</span></a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="blog.html"><span>Blog</span></a>
+                                    <a href="blog"><span>Blog</span></a>
                                     <ul class="submenu">
-                                        <li><a href="blog.html"><span>blog</span></a></li>
-                                        <li><a href="blog-details.html"><span>blog details</span></a></li>
+                                        <li><a href="blog"><span>blog</span></a></li>
+                                        <li><a href="blog-details"><span>blog details</span></a></li>
                                     </ul> 
                                 </li>
-                                <li><a href="contact.html"><span>Contact</span></a></li>
+                                <li><a href="contact"><span>Contact</span></a></li>
                             </ul>
                         </nav>
                         <div class="xb-header-wrap">
@@ -103,7 +102,7 @@
                                 <div class="xb-header-menu-scroll">
                                     <div class="xb-menu-close xb-hide-xl xb-close"></div>
                                     <div class="xb-logo-mobile xb-hide-xl">
-                                    <a href="index.html" rel="home"><img src="assets/img/logo/logo-sticky03.svg" alt=""></a></div>
+                                    <a href="" rel="home"><img src="{% static 'img/logo/logo-sticky03.svg' %}" alt=""></a></div>
                                     <div class="xb-header-mobile-search xb-hide-xl">
                                         <form role="search" action="#">
                                             <input type="text" placeholder="Search..." name="s" class="search-field">
@@ -115,34 +114,34 @@
                                             <li class="menu-item menu-item-has-children">
                                                 <a href="#"><span>Home</span></a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="index.html"><span>residential solar</span></a></li>
-                                                    <li><a href="commercial-solar.html"><span>commercial-solar</span></a></li>
+                                                    <li><a href=""><span>residential solar</span></a></li>
+                                                    <li><a href="commercial-solar"><span>commercial-solar</span></a></li>
                                                 </ul>
                                             </li>
                                             <li class="menu-item menu-item-has-children">
                                                 <a href="#!"><span>Pages</span></a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="about.html"><span>about us</span></a></li>
-                                                    <li><a href="service-details.html"><span>service details</span></a></li>
-                                                    <li><a href="terms.html"><span>terms & conditions</span></a></li>
-                                                    <li><a href="privacy.html"><span>privacy policy</span></a></li>
+                                                    <li><a href="about"><span>about us</span></a></li>
+                                                    <li><a href="service-details"><span>service details</span></a></li>
+                                                    <li><a href="terms"><span>terms & conditions</span></a></li>
+                                                    <li><a href="privacy"><span>privacy policy</span></a></li>
                                                 </ul>
                                             </li>
                                             <li class="menu-item menu-item-has-children">
-                                                <a href="project.html"><span>Projects</span></a>
+                                                <a href="project"><span>Projects</span></a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="project.html"><span>Projects</span></a></li>
-                                                    <li class="active"><a href="project-details.html"><span>Project details</span></a></li>
+                                                    <li><a href="project"><span>Projects</span></a></li>
+                                                    <li class="active"><a href="project-details"><span>Project details</span></a></li>
                                                 </ul>
                                             </li>
                                             <li class="menu-item menu-item-has-children">
-                                                <a href="blog.html"><span>blog</span></a>
+                                                <a href="blog"><span>blog</span></a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="blog.html"><span>blog</span></a></li>
-                                                    <li><a href="blog-details.html"><span>blog details</span></a></li>
+                                                    <li><a href="blog"><span>blog</span></a></li>
+                                                    <li><a href="blog-details"><span>blog details</span></a></li>
                                                 </ul> 
                                             </li>
-                                            <li><a href="contact.html"><span>Contact</span></a></li>
+                                            <li><a href="contact"><span>Contact</span></a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -168,7 +167,7 @@
     <!-- main area start -->
     <main>
         <!-- hero start -->
-        <section class="hero hero-style-two pos-rel bg_img" data-background="assets/img/bg/hero_bg2.jpg">
+        <section class="hero hero-style-two pos-rel bg_img" data-background="{% static 'img/bg/hero_bg2.jpg' %}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-10 col-sm-8">
@@ -176,8 +175,8 @@
                             <p class="content wow xb-animetion-left" data-wow-delay="0ms" data-wow-duration="800ms">Revolutionize Your Business with</p>
                             <h2 class="xb-title text-anime">COMMERCIAL SOLAR SOLUTIONS</h2>
                             <div class="hero-btn mt-50 ul_li wow fadeInUp" data-wow-delay="900ms" data-wow-duration="600ms">
-                                <a href="contact.html" class="thm-btn commercial-btn">Get a quote</a>
-                                <a href="about.html" class="thm-btn commercial-btn commercial-btn--border">About us</a>
+                                <a href="contact" class="thm-btn commercial-btn">Get a quote</a>
+                                <a href="about" class="thm-btn commercial-btn commercial-btn--border">About us</a>
                             </div>
                         </div>
                     </div>
@@ -195,7 +194,7 @@
                         <h2 class="title text-anime">Green solutions for <br> a sustainable future.</h2>
                     </div>
                     <div class="hero-btn mt-30">
-                        <a href="service-details.html" class="thm-btn commercial-btn">More Services</a>
+                        <a href="service-details" class="thm-btn commercial-btn">More Services</a>
                     </div>
                 </div>
                 <div class="xb-service-slider swiper-container">
@@ -278,7 +277,7 @@
         <!-- service end -->
 
         <!-- project start -->
-        <section class="project project-bg pt-110 pb-120 pos-rel bg_img parallaxie" data-background="assets/img/project/img01.jpg">
+        <section class="project project-bg pt-110 pb-120 pos-rel bg_img parallaxie" data-background="{% static 'img/project/img01.jpg' %}">
             <div class="container">
                 <div class="xb-project-wrap text-center">
                     <div class="sec-title sec-title--two mb-45">
@@ -291,7 +290,7 @@
                         Our many years within the industry have taught us the importance of taking the right approach to your journey intorenewables, and we address each project pragmatically toencourage its success. 
                     </p>
                     <div class="project-btn">
-                        <a href="project.html" class="thm-btn commercial-btn">CASE STUDIES</a>
+                        <a href="project" class="thm-btn commercial-btn">CASE STUDIES</a>
                     </div>
                 </div>
             </div>
@@ -307,55 +306,55 @@
                 <div class="row mt-none-30 justify-content-lg-center justify-content-md-start">
                     <div class="col-xl-4 col-md-6 mt-30">
                         <div class="xb-industries-item wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">
-                            <div class="xb-icon"><img src="assets/img/icon/ind-icon01.svg" alt=""></div>
+                            <div class="xb-icon"><img src="{% static 'img/icon/ind-icon01.svg' %}" alt=""></div>
                             <h3 class="xb-title">FARMING & AGRICULTURE</h3>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6 mt-30">
                         <div class="xb-industries-item wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
-                            <div class="xb-icon"><img src="assets/img/icon/ind-icon02.svg" alt=""></div>
+                            <div class="xb-icon"><img src="{% static 'img/icon/ind-icon02.svg' %}" alt=""></div>
                             <h3 class="xb-title">CONSTRUCTION</h3>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6 mt-30">
                         <div class="xb-industries-item wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
-                            <div class="xb-icon"><img src="assets/img/icon/ind-icon03.svg" alt=""></div>
+                            <div class="xb-icon"><img src="{% static 'img/icon/ind-icon03.svg' %}" alt=""></div>
                             <h3 class="xb-title">MANUFACTURING</h3>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6 mt-30">
                         <div class="xb-industries-item wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">
-                            <div class="xb-icon"><img src="assets/img/icon/ind-icon04.svg" alt=""></div>
+                            <div class="xb-icon"><img src="{% static 'img/icon/ind-icon04.svg' %}" alt=""></div>
                             <h3 class="xb-title">HOSPITALITY & LEISURE</h3>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6 mt-30">
                         <div class="xb-industries-item wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
-                            <div class="xb-icon"><img src="assets/img/icon/ind-icon05.svg" alt=""></div>
+                            <div class="xb-icon"><img src="{% static 'img/icon/ind-icon05.svg' %}" alt=""></div>
                             <h3 class="xb-title">HEALTHCARE</h3>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6 mt-30">
                         <div class="xb-industries-item wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
-                            <div class="xb-icon"><img src="assets/img/icon/ind-icon06.svg" alt=""></div>
+                            <div class="xb-icon"><img src="{% static 'img/icon/ind-icon06.svg' %}" alt=""></div>
                             <h3 class="xb-title">EDUCATION</h3>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6 mt-30">
                         <div class="xb-industries-item wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">
-                            <div class="xb-icon"><img src="assets/img/icon/ind-icon07.svg" alt=""></div>
+                            <div class="xb-icon"><img src="{% static 'img/icon/ind-icon07.svg' %}" alt=""></div>
                             <h3 class="xb-title">PUBLIC SECTOR</h3>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6 mt-30">
                         <div class="xb-industries-item wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
-                            <div class="xb-icon"><img src="assets/img/icon/ind-icon08.svg" alt=""></div>
+                            <div class="xb-icon"><img src="{% static 'img/icon/ind-icon08.svg' %}" alt=""></div>
                             <h3 class="xb-title">RETAIL & WHOLESALE</h3>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6 mt-30">
                         <div class="xb-industries-item wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
-                            <div class="xb-icon"><img src="assets/img/icon/ind-icon09.svg" alt=""></div>
+                            <div class="xb-icon"><img src="{% static 'img/icon/ind-icon09.svg' %}" alt=""></div>
                             <h3 class="xb-title">TRANSPORT & LOGISTICS</h3>
                         </div>
                     </div>
@@ -364,7 +363,7 @@
                     </div>
                 </div>
                 <div class="industries-btn text-center mt-45 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">
-                    <a href="contact.html" class="thm-btn commercial-btn">Get A Quote</a>
+                    <a href="contact" class="thm-btn commercial-btn">Get A Quote</a>
                 </div>
             </div>
         </section>
@@ -377,7 +376,7 @@
                     <div class="col-lg-4 col-md-4 feature-col">
                         <div class="xb-feature-item">
                             <div class="xb-item--img">
-                                <img src="assets/img/feature/img01.jpg" alt="">
+                                <img src="{% static 'img/feature/img01.jpg' %}" alt="">
                             </div>
                             <div class="xb-item--holder">
                                 <h3 class="xb-item--title">Your Options</h3>
@@ -392,7 +391,7 @@
                     <div class="col-lg-4 col-md-4 feature-col">
                         <div class="xb-feature-item">
                             <div class="xb-item--img">
-                                <img src="assets/img/feature/img02.jpg" alt="">
+                                <img src="{% static 'img/feature/img02.jpg' %}" alt="">
                             </div>
                             <div class="xb-item--holder">
                                 <h3 class="xb-item--title">The Partnership Process</h3>
@@ -407,7 +406,7 @@
                     <div class="col-lg-4 col-md-4 feature-col">
                         <div class="xb-feature-item">
                             <div class="xb-item--img">
-                                <img src="assets/img/feature/img03.jpg" alt="">
+                                <img src="{% static 'img/feature/img03.jpg' %}" alt="">
                             </div>
                             <div class="xb-item--holder">
                                 <h3 class="xb-item--title">Our Guarantee</h3>
@@ -481,10 +480,10 @@
                     </div>
                     <div class="col-lg-4 mt-50">
                         <div class="tes-company-logo">
-                            <div class="item"><img src="assets/img/testimonial/company-logo01.jpg" alt=""></div>
-                            <div class="item"><img src="assets/img/testimonial/company-logo02.jpg" alt=""></div>
-                            <div class="item"><img src="assets/img/testimonial/company-logo04.jpg" alt=""></div>
-                            <div class="item"><img src="assets/img/testimonial/company-logo03.jpg" alt=""></div>
+                            <div class="item"><img src="{% static 'img/testimonial/company-logo01.jpg' %}" alt=""></div>
+                            <div class="item"><img src="{% static 'img/testimonial/company-logo02.jpg' %}" alt=""></div>
+                            <div class="item"><img src="{% static 'img/testimonial/company-logo04.jpg' %}" alt=""></div>
+                            <div class="item"><img src="{% static 'img/testimonial/company-logo03.jpg' %}" alt=""></div>
                             
                         </div>
                     </div>
@@ -511,19 +510,19 @@
                                 <div class="blog-item ul_li align-items-start">
                                     <div class="xb-item--author">
                                         <div class="xb-item--author_box ul_li">
-                                            <div class="xb-item--avater"><img src="assets/img/blog/author-img01.png" alt="">
+                                            <div class="xb-item--avater"><img src="{% static 'img/blog/author-img01.png' %}" alt="">
                                             </div>
                                             <h4 class="xb-item--desig">Solar Gen Group</h4>
                                         </div>
                                         <span class="xb-item--date">January 8 ,2025</span>
                                     </div>
                                     <div class="xb-item--holder">
-                                        <h2 class="xb-item--title"><a href="blog-details.html">The Ultimate Guide to Professional Solar Panel Installations</a></h2>
+                                        <h2 class="xb-item--title"><a href="blog-details">The Ultimate Guide to Professional Solar Panel Installations</a></h2>
                                         <p class="xb-item--content">At Solar Gen Group, we understand the growing desire for homeowners and businesses to take control of their energy bills and reduce their.</p>
                                     </div>
                                 </div>
                                 <div class="blog-nav-item">
-                                    <a href="blog-details.html"><img src="assets/img/blog/blog-img01.jpg" alt=""></a>
+                                    <a href="blog-details"><img src="{% static 'img/blog/blog-img01.jpg' %}" alt=""></a>
                                     <div class="xb-meta ul_li_between">
                                         <ul class="xb-view list-unstyled ul_li">
                                             <li>5 views</li>
@@ -543,19 +542,19 @@
                                 <div class="blog-item ul_li align-items-start">
                                     <div class="xb-item--author">
                                         <div class="xb-item--author_box ul_li">
-                                            <div class="xb-item--avater"><img src="assets/img/blog/author-img02.png" alt="">
+                                            <div class="xb-item--avater"><img src="{% static 'img/blog/author-img02.png' %}" alt="">
                                             </div>
                                             <h4 class="xb-item--desig">Solar Gen Group</h4>
                                         </div>
                                         <span class="xb-item--date">January 8 ,2025</span>
                                     </div>
                                     <div class="xb-item--holder">
-                                        <h2 class="xb-item--title"><a href="blog-details.html">Renewable Energy Systems: Long-Term Business Savings</a></h2>
+                                        <h2 class="xb-item--title"><a href="blog-details">Renewable Energy Systems: Long-Term Business Savings</a></h2>
                                         <p class="xb-item--content">In a world where climate change is becoming an ever-growing concern, many businesses are recognising the need to adopt more sustainable...</p>
                                     </div>
                                 </div>
                                 <div class="blog-nav-item">
-                                    <a href="blog-details.html"><img src="assets/img/blog/blog-img02.jpg" alt=""></a>
+                                    <a href="blog-details"><img src="{% static 'img/blog/blog-img02.jpg' %}" alt=""></a>
                                     <div class="xb-meta ul_li_between">
                                         <ul class="xb-view list-unstyled ul_li">
                                             <li>5 views</li>
@@ -575,19 +574,19 @@
                                 <div class="blog-item ul_li align-items-start">
                                     <div class="xb-item--author">
                                         <div class="xb-item--author_box ul_li">
-                                            <div class="xb-item--avater"><img src="assets/img/blog/author-img02.png" alt="">
+                                            <div class="xb-item--avater"><img src="{% static 'img/blog/author-img02.png' %}" alt="">
                                             </div>
                                             <h4 class="xb-item--desig">Solar Gen Group</h4>
                                         </div>
                                         <span class="xb-item--date">January 8 ,2025</span>
                                     </div>
                                     <div class="xb-item--holder">
-                                        <h2 class="xb-item--title"><a href="blog-details.html">Solar Panels For Business: Everything You Need To Know</a></h2>
+                                        <h2 class="xb-item--title"><a href="blog-details">Solar Panels For Business: Everything You Need To Know</a></h2>
                                         <p class="xb-item--content">With energy costs rising, and sustainability becoming a central focus for businesses, solar panels have become a practical and effective</p>
                                     </div>
                                 </div>
                                 <div class="blog-nav-item">
-                                    <a href="blog-details.html"><img src="assets/img/blog/blog-img03.jpg" alt=""></a>
+                                    <a href="blog-details"><img src="{% static 'img/blog/blog-img03.jpg' %}" alt=""></a>
                                     <div class="xb-meta ul_li_between">
                                         <ul class="xb-view list-unstyled ul_li">
                                             <li>5 views</li>
@@ -607,19 +606,19 @@
                                 <div class="blog-item ul_li align-items-start">
                                     <div class="xb-item--author">
                                         <div class="xb-item--author_box ul_li">
-                                            <div class="xb-item--avater"><img src="assets/img/blog/author-img04.png" alt="">
+                                            <div class="xb-item--avater"><img src="{% static 'img/blog/author-img04.png' %}" alt="">
                                             </div>
                                             <h4 class="xb-item--desig">Solar Gen Group</h4>
                                         </div>
                                         <span class="xb-item--date">January 8 ,2025</span>
                                     </div>
                                     <div class="xb-item--holder">
-                                        <h2 class="xb-item--title"><a href="blog-details.html">The Top 8 Solar Energy Projects Powering Our World</a></h2>
+                                        <h2 class="xb-item--title"><a href="blog-details">The Top 8 Solar Energy Projects Powering Our World</a></h2>
                                         <p class="xb-item--content">The climate emergency remains a prevalent global concern as we move through the 21st century, where every country is currently facing...</p>
                                     </div>
                                 </div>
                                 <div class="blog-nav-item">
-                                    <a href="blog-details.html"><img src="assets/img/blog/blog-img04.jpg" alt=""></a>
+                                    <a href="blog-details"><img src="{% static 'img/blog/blog-img04.jpg' %}" alt=""></a>
                                     <div class="xb-meta ul_li_between">
                                         <ul class="xb-view list-unstyled ul_li">
                                             <li>5 views</li>
@@ -651,7 +650,7 @@
         <!-- blog end -->
 
         <!-- contact start -->
-        <section class="contact contact-overlay pt-130 bg_img" data-background="assets/img/bg/contact-bg02.jpg">
+        <section class="contact contact-overlay pt-130 bg_img" data-background="{% static 'img/bg/contact-bg02.jpg' %}">
             <div class="container">
                 <div class="contact-form contact-form--two">
                     <form action="#">
@@ -714,7 +713,7 @@
                     <h2 class="title text-anime">One of the UK’s leading <br> commercial solar experts</h2>
                 </div>
                 <div class="footer-btn mt-30">
-                    <a href="contact.html" class="thm-btn commercial-btn">Get A Quote</a>
+                    <a href="contact" class="thm-btn commercial-btn">Get A Quote</a>
                 </div>
             </div>
             <div class="xb-footer-wrap pt-65 pb-130 ul_li_between align-items-start">
@@ -776,7 +775,7 @@
         <div class="xb-footer_bottom">
             <div class="container">
                 <div class="xb-footer-bottom-inner ul_li_between">
-                    <P>© 2025 <a href="index.html">Solara</a> — All Rights Reserved</P>
+                    <P>© 2025 <a href="">Solara</a> — All Rights Reserved</P>
                     <ul class="list-unstyled ul_li">
                         <li><a href="#!">Terms & Conditions</a></li>
                         <li><a href="#!">Camlin Privacy Policy</a></li>
@@ -793,25 +792,25 @@
 </div>
 
 <!-- jquery include -->
-<script src="assets/js/jquery-3.7.1.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/swiper.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/appear.js"></script>
-<script src="assets/js/parallax-scroll.js"></script>
-<script src="assets/js/isotope.pkgd.min.js"></script>
-<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="assets/js/odometer.min.js"></script>
-<script src="assets/js/jquery.nice-select.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/jqueryui.js"></script>
-<script src="assets/js/parallaxie.js"></script>
-<script src="assets/js/easing.min.js"></script>
-<script src="assets/js/scrollspy.js"></script>
-<script src="assets/js/splitType.js"></script>
-<script src="assets/js/gsap.min.js"></script>
-<script src="assets/js/ScrollTrigger.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/swiper.min.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/appear.js' %}"></script>
+<script src="{% static 'js/parallax-scroll.js' %}"></script>
+<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'js/odometer.min.js' %}"></script>
+<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/jqueryui.js' %}"></script>
+<script src="{% static 'js/parallaxie.js' %}"></script>
+<script src="{% static 'js/easing.min.js' %}"></script>
+<script src="{% static 'js/scrollspy.js' %}"></script>
+<script src="{% static 'js/splitType.js' %}"></script>
+<script src="{% static 'js/gsap.min.js' %}"></script>
+<script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 
 
 

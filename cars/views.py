@@ -20,6 +20,24 @@ def privacy_view(request):
 def service_view(request):
 	return render(request, 'service-details.html')
 
+def blog_view(request):
+	return render(request, 'blog.html')
+
+def about_view(request):
+	return render(request, 'about.html')
+
+def blog_details_view(request):
+	return render(request, 'blog-details.html')
+
+def commercial_solar_view(request):
+	return render(request, 'commercial-solar.html')
+
+def power_solution(request):
+	return render(request, 'power-solution.html')
+
+def terms_view(request):
+	return render(request, 'terms.html')
+
 class CarListView(ListView):
 	model = Car
 	template_name = 'cars.html'

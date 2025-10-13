@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 from accounts.views import auth_page_view, ProcessarFormularioView, FormularioContactView, project_view, project_details_view
 from cars import views
-from cars.views import privacy_view, service_view
+from cars.views import privacy_view, service_view, blog_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,4 +34,10 @@ urlpatterns = [
     path('project-details', project_details_view, name='project-details'),
     path('privacy', privacy_view, name='privacy'),
     path('service-details', service_view, name='service-details'),
+    path('blog', blog_view, name='blog'),
+    path('about', blog_view, name='about'),
+    path('blog-details', blog_view, name='blog-details'),
+    path('commercial-solar', blog_view, name='commercial-solar'),
+    path('power-solution', blog_view, name='power-solution'),
+    path('terms', blog_view, name='terms'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

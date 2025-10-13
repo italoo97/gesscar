@@ -2,8 +2,7 @@
 <html lang="zxx">
 
 <head>
-
-    <!--========= Required meta tags =========-->
+    {% load static %}
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
@@ -11,18 +10,18 @@
 
     <title>Residential Solar Solutions HTML Template</title>
 
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="images/x-icon">
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="images/x-icon">
 
     <!-- css include -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/odometer.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/odometer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 
 <body class="power-solution">
@@ -59,44 +58,44 @@
                 <div class="header__wrap ul_li_between">
                     <div class="header-left-content ul_li">
                         <div class="header-logo">
-                            <a href="index.html" class="logo1"><img src="assets/img/logo/logo-three.svg" alt=""></a>
-                            <a href="index.html" class="logo2"><img src="assets/img/logo/logo-sticky02.svg" alt=""></a>
+                            <a href="" class="logo1"><img src="{% static 'img/logo/logo-three.svg' %}" alt=""></a>
+                            <a href="" class="logo2"><img src="{% static 'img/logo/logo-sticky02.svg' %}" alt=""></a>
                         </div>
                         <div class="main-menu__wrap  navbar navbar-expand-lg">
                             <nav class="main-menu collapse navbar-collapse">
                                 <ul>
                                     <li class="menu-item-has-children active">
-                                        <a href="index.html"><span>Home</span></a>
+                                        <a href=""><span>Home</span></a>
                                         <ul class="submenu">
-                                            <li><a href="index.html"><span>residential solar</span></a></li>
-                                            <li><a href="commercial-solar.html"><span>commercial solar</span></a></li>
-                                            <li class="active"><a href="power-solution.html"><span>power solutions</span></a></li>
+                                            <li><a href=""><span>residential solar</span></a></li>
+                                            <li><a href="commercial-solar"><span>commercial solar</span></a></li>
+                                            <li class="active"><a href="power-solution"><span>power solutions</span></a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="#!"><span>Pages</span></a>
                                         <ul class="submenu">
-                                            <li><a href="about.html"><span>about us</span></a></li>
-                                            <li><a href="service-details.html"><span>service details</span></a></li>
-                                            <li><a href="terms.html"><span>terms & conditions</span></a></li>
-                                            <li><a href="privacy.html"><span>privacy policy</span></a></li>
+                                            <li><a href="about"><span>about us</span></a></li>
+                                            <li><a href="service-details"><span>service details</span></a></li>
+                                            <li><a href="terms"><span>terms & conditions</span></a></li>
+                                            <li><a href="privacy"><span>privacy policy</span></a></li>
                                         </ul>   
                                     </li> 
                                     <li class="menu-item-has-children">
-                                        <a href="project.html"><span>Projects</span></a>
+                                        <a href="project"><span>Projects</span></a>
                                         <ul class="submenu">
-                                            <li><a href="project.html"><span>Projects</span></a></li>
-                                            <li><a href="project-details.html"><span>Project details</span></a></li>
+                                            <li><a href="project"><span>Projects</span></a></li>
+                                            <li><a href="project-details"><span>Project details</span></a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="blog.html"><span>Blog</span></a>
+                                        <a href="blog"><span>Blog</span></a>
                                         <ul class="submenu">
-                                            <li><a href="blog.html"><span>blog</span></a></li>
-                                            <li><a href="blog-details.html"><span>blog details</span></a></li>
+                                            <li><a href="blog"><span>blog</span></a></li>
+                                            <li><a href="blog-details"><span>blog details</span></a></li>
                                         </ul> 
                                     </li>
-                                    <li><a href="contact.html"><span>Contact</span></a></li>
+                                    <li><a href="contact"><span>Contact</span></a></li>
                                 </ul>
                             </nav>
                             <div class="xb-header-wrap">
@@ -104,7 +103,7 @@
                                     <div class="xb-header-menu-scroll">
                                         <div class="xb-menu-close xb-hide-xl xb-close"></div>
                                         <div class="xb-logo-mobile xb-hide-xl">
-                                        <a href="index.html" rel="home"><img src="assets/img/logo/logo-sticky.svg" alt=""></a></div>
+                                        <a href="" rel="home"><img src="{% static 'img/logo/logo-sticky.svg' %}" alt=""></a></div>
                                         <div class="xb-header-mobile-search xb-hide-xl">
                                             <form role="search" action="#">
                                                 <input type="text" placeholder="Search..." name="s" class="search-field">
@@ -116,35 +115,35 @@
                                                 <li class="menu-item menu-item-has-children">
                                                     <a href="#"><span>Home</span></a>
                                                     <ul class="sub-menu">
-                                                        <li><a href="index.html"><span>residential solar</span></a></li>
-                                                        <li><a href="commercial-solar.html"><span>commercial-solar</span></a></li>
-                                                        <li><a href="power-solution.html"><span>power solutions</span></a></li>
+                                                        <li><a href=""><span>residential solar</span></a></li>
+                                                        <li><a href="commercial-solar"><span>commercial-solar</span></a></li>
+                                                        <li><a href="power-solution"><span>power solutions</span></a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="menu-item menu-item-has-children">
                                                     <a href="#!"><span>Pages</span></a>
                                                     <ul class="sub-menu">
-                                                        <li><a href="about.html"><span>about us</span></a></li>
-                                                        <li><a href="service-details.html"><span>service details</span></a></li>
-                                                        <li><a href="terms.html"><span>terms & conditions</span></a></li>
-                                                        <li><a href="privacy.html"><span>privacy policy</span></a></li>
+                                                        <li><a href="about"><span>about us</span></a></li>
+                                                        <li><a href="service-details"><span>service details</span></a></li>
+                                                        <li><a href="terms"><span>terms & conditions</span></a></li>
+                                                        <li><a href="privacy"><span>privacy policy</span></a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="menu-item menu-item-has-children">
-                                                    <a href="project.html"><span>Projects</span></a>
+                                                    <a href="project"><span>Projects</span></a>
                                                     <ul class="sub-menu">
-                                                        <li><a href="project.html"><span>Projects</span></a></li>
-                                                        <li class="active"><a href="project-details.html"><span>Project details</span></a></li>
+                                                        <li><a href="project"><span>Projects</span></a></li>
+                                                        <li class="active"><a href="project-details"><span>Project details</span></a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="menu-item menu-item-has-children">
-                                                    <a href="blog.html"><span>blog</span></a>
+                                                    <a href="blog"><span>blog</span></a>
                                                     <ul class="sub-menu">
-                                                        <li><a href="blog.html"><span>blog</span></a></li>
-                                                        <li><a href="blog-details.html"><span>blog details</span></a></li>
+                                                        <li><a href="blog"><span>blog</span></a></li>
+                                                        <li><a href="blog-details"><span>blog details</span></a></li>
                                                     </ul> 
                                                 </li>
-                                                <li><a href="contact.html"><span>Contact</span></a></li>
+                                                <li><a href="contact"><span>Contact</span></a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -155,10 +154,10 @@
                     </div>
                     <div class="header-right-content ul_li d-none d-xl-flex">
                         <a class="header-search header-search-btn" href="javascript:void(0);">
-                            <img src="assets/img/icon/search-white-icon.svg" alt="">
+                            <img src="{% static 'img/icon/search-white-icon.svg' %}" alt="">
                         </a>
                         <div class="header-contact">
-                            <a href="tel:+682-3386-69862" class="thm-btn commercial-btn power-btn"><img src="assets/img/icon/call-black-icon.svg" alt=""> +682-3386-69862</a>
+                            <a href="tel:+682-3386-69862" class="thm-btn commercial-btn power-btn"><img src="{% static 'img/icon/call-black-icon.svg' %}" alt=""> +682-3386-69862</a>
                         </div>
                     </div>
                     <div class="header-bar-mobile side-menu d-lg-none">
@@ -187,12 +186,12 @@
     <!-- main area start -->
     <main>
         <!-- hero start -->
-         <section class="hero hero-style-three pt-130 pb-130 pos-rel bg_img" data-background="assets/img/bg/hero_bg3.jpg">
+         <section class="hero hero-style-three pt-130 pb-130 pos-rel bg_img" data-background="{% static 'img/bg/hero_bg3.jpg' %}">
             <div class="container-fluid p-0">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="xb-hero_content">
-                            <h2 class="xb-title wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms"><img src="assets/img/hero/panel-img.png" alt=""> <span>Protecting</span> your most critical assets.</h2>
+                            <h2 class="xb-title wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms"><img src="{% static 'img/hero/panel-img.png' %}" alt=""> <span>Protecting</span> your most critical assets.</h2>
                             <p class="content wow fadeInUp" data-wow-delay="150ms" data-wow-duration="800ms">Discover how Kelvatek's advanced monitoring solutions optimise the performance and reliability of transformers on wind farms across the UK, ensuring efficient and sustainable power generation.</p>
                         </div>
                     </div>
@@ -224,14 +223,14 @@
                             <div class="about-left-content">
                                 <div class="ps-about-item wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">
                                     <div class="xb-item--icon">
-                                        <img src="assets/img/icon/fea-icon01.svg" alt="">
+                                        <img src="{% static 'img/icon/fea-icon01.svg' %}" alt="">
                                     </div>
                                     <h3 class="xb-item--title">Increasing Productivity</h3>
                                     <p class="xb-item--content">Maintaining your renewable energy System Often will keep it its best.</p>
                                 </div>
                                 <div class="ps-about-item wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
                                     <div class="xb-item--icon">
-                                        <img src="assets/img/icon/fea-icon02.svg" alt="">
+                                        <img src="{% static 'img/icon/fea-icon02.svg' %}" alt="">
                                     </div>
                                     <h3 class="xb-item--title">Boosts System Durability</h3>
                                     <p class="xb-item--content">Maintaining your energy system can help it last and the for later on.</p>
@@ -241,14 +240,14 @@
                         <div class="col-lg-6 mt-30">
                             <div class="about-right-content">
                                 <div class="xb-img">
-                                    <img src="assets/img/about/img02.jpg" alt="">
+                                    <img src="{% static 'img/about/img02.jpg' %}" alt="">
                                 </div>
                                 <div class="play-video">
-                                    <a href="https://www.youtube.com/watch?v=cRXm1p-CNyk" class="popup-video"><img src="assets/img/icon/play-icon.svg" alt=""></a>
+                                    <a href="https://www.youtube.com/watch?v=cRXm1p-CNyk" class="popup-video"><img src="{% static 'img/icon/play-icon.svg' %}" alt=""></a>
                                     <span>Play Video</span>
                                 </div>
                                 <div class="xb-img-shape wow fadeInRight" data-wow-delay="0ms" data-wow-duration="600ms">
-                                    <img src="assets/img/about/img03.png" alt="">
+                                    <img src="{% static 'img/about/img03.png' %}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -274,21 +273,21 @@
                                         <h3 class="xb-item--title">A Greener Way to <br> Get Around</h3>
                                         <p class="xb-item--content">Dive World Of Electric Vehicles. Their Environmental-</p>
                                         <div class="xb-btn mt-40">
-                                            <a href="project.html" class="thm-btn commercial-btn power-btn power-btn--balck">Case study series</a>
+                                            <a href="project" class="thm-btn commercial-btn power-btn power-btn--balck">Case study series</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 mt-30">
                                 <div class="overview-item">
-                                    <div class="xb-img"><img src="assets/img/overview/img1.jpg" alt=""></div>
+                                    <div class="xb-img"><img src="{% static 'img/overview/img1.jpg' %}" alt=""></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 mt-30">
                         <div class="overview-item overview-item--big">
-                            <div class="xb-img"><img src="assets/img/overview/img2.jpg" alt=""></div>
+                            <div class="xb-img"><img src="{% static 'img/overview/img2.jpg' %}" alt=""></div>
                             <h3 class="xb-item--title">Ecology wind, <br> Solar Energy</h3>
                             <ul class="xb-item--tag ul_li">
                                 <li><a href="#!">Renew</a></li>
@@ -361,8 +360,8 @@
                 <div class="row mt-none-30 align-items-end">
                     <div class="col-lg-6 mt-30">
                         <div class="infographic-left-content ul_li align-items-end">
-                            <div class="xb-img wow skewInImg" data-wow-delay="0ms" data-wow-duration="600ms"><img src="assets/img/Infographic/image1.jpg" alt=""></div>
-                            <div class="xb-img wow skewInImg" data-wow-delay="0ms" data-wow-duration="600ms"><img src="assets/img/Infographic/image2.jpg" alt=""></div>
+                            <div class="xb-img wow skewInImg" data-wow-delay="0ms" data-wow-duration="600ms"><img src="{% static 'img/Infographic/image1.jpg' %}" alt=""></div>
+                            <div class="xb-img wow skewInImg" data-wow-delay="0ms" data-wow-duration="600ms"><img src="{% static 'img/Infographic/image2.jpg' %}" alt=""></div>
                         </div>
                     </div>
                     <div class="col-lg-6 mt-30">
@@ -377,7 +376,7 @@
                                 To find out more about the cost of downtime due to transformer failure, and the role of transformer monitoring, download our infographic.
                             </p>
                             <div class="xb-btn mt-40">
-                                <a href="contact.html" class="thm-btn commercial-btn power-btn">Get a quote</a>
+                                <a href="contact" class="thm-btn commercial-btn power-btn">Get a quote</a>
                             </div>
                             
                         </div>
@@ -385,7 +384,7 @@
                 </div>
             </div>
             <div class="infographic-shape wow fadeInRight" data-wow-delay="0ms" data-wow-duration="600ms">
-                <img src="assets/img/shape/wind-power.png" alt="">
+                <img src="{% static 'img/shape/wind-power.png' %}" alt="">
             </div>
          </section>
         <!-- infographic end -->
@@ -400,7 +399,7 @@
                         <p class="content">In the case studies below, we detail how our solutions have helped a range of organisations mitigate costly transformer failures and ensure asset availability.</p>
                     </div>
                     <div class="xb-btn mb-30">
-                        <a href="project.html" class="thm-btn commercial-btn power-btn power-btn--balck">Case study series</a>
+                        <a href="project" class="thm-btn commercial-btn power-btn power-btn--balck">Case study series</a>
                     </div>
                 </div>
             </div>
@@ -410,32 +409,32 @@
                         <div class="swiper-slide">
                             <div class="project-item">
                                 <div class="xb-item--img">
-                                    <img src="assets/img/project/img02.jpg" alt="">
+                                    <img src="{% static 'img/project/img02.jpg' %}" alt="">
                                 </div>
                                 <h2 class="xb-item--title">Offshore circuit breaker testing for Ventus Energy</h2>
                                 <p class="xb-item--content">How Ventus Energy and Kelvatek are working together to <br> increase wind farm reliability.</p>
-                                <a href="project-details.html" class="xb-item--more-btn">Learn More</a>
+                                <a href="project-details" class="xb-item--more-btn">Learn More</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="project-item">
                                 <div class="xb-item--img">
-                                    <img src="assets/img/project/img03.jpg" alt="">
+                                    <img src="{% static 'img/project/img03.jpg' %}" alt="">
                                 </div>
                                 <h2 class="xb-item--title">Transformer monitoring for major UK wind operator</h2>
                                 <p class="xb-item--content">A major UK wind farm could have avoided f 10m in lost revenues
                                    <br> with online bushing monitoring.</p>
-                                <a href="project-details.html" class="xb-item--more-btn">Learn More</a>
+                                <a href="project-details" class="xb-item--more-btn">Learn More</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="project-item">
                                 <div class="xb-item--img">
-                                    <img src="assets/img/project/img04.jpg" alt="">
+                                    <img src="{% static 'img/project/img04.jpg' %}" alt="">
                                 </div>
                                 <h2 class="xb-item--title">Offshore circuit breaker testing for Ventus Energy</h2>
                                 <p class="xb-item--content">How Ventus Energy and Kelvatek are working together to <br> increase wind farm reliability.</p>
-                                <a href="project-details.html" class="xb-item--more-btn">Learn More</a>
+                                <a href="project-details" class="xb-item--more-btn">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -454,7 +453,7 @@
                 <div class="row mt-none-30">
                     <div class="col-lg-5 mt-30">
                         <div class="faq-left-content wow skewInImg" data-wow-delay="0ms" data-wow-duration="600ms">
-                            <img src="assets/img/faq/img.jpg" alt="">
+                            <img src="{% static 'img/faq/img.jpg' %}" alt="">
                         </div>
                     </div>
                     <div class="col-lg-7 mt-30">
@@ -540,8 +539,8 @@
                         <div class="ps-blog-item">
                             <div class="xb-item---inner">
                                 <div class="xb-item--img">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/blog/blog-img05.jpg" alt="">
+                                    <a href="blog-details">
+                                        <img src="{% static 'img/blog/blog-img05.jpg' %}" alt="">
                                     </a>
                                 </div>
                                 <div class="xb-item--holder">
@@ -549,7 +548,7 @@
                                         <li>Rail</li>
                                         <li> 14th January 2025</li>
                                     </ul>
-                                    <h2 class="xb-item--title border-effect"><a href="blog-details.html">Tackling Operational Complexities in Railway Maintenance</a></h2>
+                                    <h2 class="xb-item--title border-effect"><a href="blog-details">Tackling Operational Complexities in Railway Maintenance</a></h2>
                                 </div>
                             </div>
                         </div>
@@ -558,8 +557,8 @@
                         <div class="ps-blog-item">
                             <div class="xb-item---inner">
                                 <div class="xb-item--img">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/blog/blog-img06.jpg" alt="">
+                                    <a href="blog-details">
+                                        <img src="{% static 'img/blog/blog-img06.jpg' %}" alt="">
                                     </a>
                                 </div>
                                 <div class="xb-item--holder">
@@ -567,7 +566,7 @@
                                         <li>Rail</li>
                                         <li> 14th January 2025</li>
                                     </ul>
-                                    <h2 class="xb-item--title border-effect"><a href="blog-details.html">National Roll out of Train Inspection Solution in Netherlands</a></h2>
+                                    <h2 class="xb-item--title border-effect"><a href="blog-details">National Roll out of Train Inspection Solution in Netherlands</a></h2>
                                 </div>
                             </div>
                         </div>
@@ -576,8 +575,8 @@
                         <div class="ps-blog-item">
                             <div class="xb-item---inner">
                                 <div class="xb-item--img">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/blog/blog-img07.jpg" alt="">
+                                    <a href="blog-details">
+                                        <img src="{% static 'img/blog/blog-img07.jpg' %}" alt="">
                                     </a>
                                 </div>
                                 <div class="xb-item--holder">
@@ -585,7 +584,7 @@
                                         <li>Rail</li>
                                         <li> 14th January 2025</li>
                                     </ul>
-                                    <h2 class="xb-item--title border-effect"><a href="blog-details.html">CEO Peter Cunningham speaks at TEDxStormont 2025</a></h2>
+                                    <h2 class="xb-item--title border-effect"><a href="blog-details">CEO Peter Cunningham speaks at TEDxStormont 2025</a></h2>
                                 </div>
                             </div>
                         </div>
@@ -596,12 +595,12 @@
         <!-- blog end -->
 
         <!-- cta start -->
-         <section class="cta cta-bg pos-rel bg_img" data-background="assets/img/cta/img1.jpg">
+         <section class="cta cta-bg pos-rel bg_img" data-background="{% static 'img/cta/img1.jpg' %}">
             <div class="container">
                 <div class="cta-content">
                     <h2 class="title wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">Join the right transformer monitoring solution.</h2>
                     <div class="xb-btn mt-40 wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
-                        <a href="contact.html" class="thm-btn commercial-btn power-btn">Book a meeting</a>
+                        <a href="contact" class="thm-btn commercial-btn power-btn">Book a meeting</a>
                     </div>
                 </div>
             </div>
@@ -628,8 +627,8 @@
                 <div class="xb-footer_contact mt-30">
                     <h3 class="xb-widget-title">CONTACT US</h3>
                     <ul class="xb-list list-unstyled">
-                        <li><a href="tel:+(1)12304528759"><img src="assets/img/icon/call-outgoing.svg" alt="">+(1) 1230 452 8759</a></li>
-                        <li><a href="mailto:solara@mail.com"><img src="assets/img/icon/sms-icon.svg" alt="">solara@mail.com</a></li>
+                        <li><a href="tel:+(1)12304528759"><img src="{% static 'img/icon/call-outgoing.svg' %}" alt="">+(1) 1230 452 8759</a></li>
+                        <li><a href="mailto:solara@mail.com"><img src="{% static 'img/icon/sms-icon.svg' %}" alt="">solara@mail.com</a></li>
                     </ul>
                 </div>
                 <div class="xb-footer_widget mt-30">
@@ -654,13 +653,13 @@
                 </div>  
             </div>
             <div class="xb-footer-logo wow xb-animetion-left" data-wow-delay="0ms" data-wow-duration="800ms">
-                <a href="index.html"><img src="assets/img/logo/footer-logo2.svg" alt=""></a> 
+                <a href=""><img src="{% static 'img/logo/footer-logo2.svg' %}" alt=""></a> 
             </div>
         </div>
         <div class="xb-footer_bottom">
             <div class="container">
                 <div class="xb-footer-bottom-inner text-center">
-                    <P>© 2025 <a href="index.html">Solara</a> — All Rights Reserved</P>
+                    <P>© 2025 <a href="">Solara</a> — All Rights Reserved</P>
                 </div>
             </div>
         </div>
@@ -671,25 +670,25 @@
 </div>
 
 <!-- jquery include -->
-<script src="assets/js/jquery-3.7.1.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/swiper.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/appear.js"></script>
-<script src="assets/js/parallax-scroll.js"></script>
-<script src="assets/js/isotope.pkgd.min.js"></script>
-<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="assets/js/odometer.min.js"></script>
-<script src="assets/js/jquery.nice-select.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/jqueryui.js"></script>
-<script src="assets/js/parallaxie.js"></script>
-<script src="assets/js/easing.min.js"></script>
-<script src="assets/js/scrollspy.js"></script>
-<script src="assets/js/splitType.js"></script>
-<script src="assets/js/gsap.min.js"></script>
-<script src="assets/js/ScrollTrigger.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/swiper.min.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/appear.js' %}"></script>
+<script src="{% static 'js/parallax-scroll.js' %}"></script>
+<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'js/odometer.min.js' %}"></script>
+<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/jqueryui.js' %}"></script>
+<script src="{% static 'js/parallaxie.js' %}"></script>
+<script src="{% static 'js/easing.min.js' %}"></script>
+<script src="{% static 'js/scrollspy.js' %}"></script>
+<script src="{% static 'js/splitType.js' %}"></script>
+<script src="{% static 'js/gsap.min.js' %}"></script>
+<script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 
 
 

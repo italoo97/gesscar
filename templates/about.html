@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-<!-- Google Tag Manager -->
+{% load static %}
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -17,18 +17,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <title>Centro Moderne - Ilumine seus caminhos para o sucesso</title>
 
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="images/x-icon"/>
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="images/x-icon"/>
 
     <!-- css include -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/odometer.css">
-    <link rel="stylesheet" href="assets/css/imageRevealHover.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/odometer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/imageRevealHover.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 
 <body>
@@ -49,7 +49,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div id="xb-loadding" class="xb-loadding-container">
         <div class="xb-loader">
             <div class="xb-loadding-inner">
-                <img src="assets/img/logo/preloader.png" alt="">
+                <img src="{% static 'img/logo/preloader.png' %}" alt="">
             </div>
         </div>
     </div>
@@ -69,22 +69,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="container">
                 <div class="header__wrap ul_li_between">
                     <div class="header-logo">
-                        <a href="index.html"><img src="assets/img/logo/logo.svg" alt=""></a>
+                        <a href=""><img src="{% static 'img/logo/logo.svg' %}" alt=""></a>
                     </div>
                     <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                         <nav class="main-menu collapse navbar-collapse">
                             <ul>
                                 <li>
-                                    <a href="/index.html"><span>Ínicio</span></a>
+                                    <a href=""><span>Ínicio</span></a>
                                 </li>
                                 <li>
-                                    <a href="courses.html"><span>Cursos</span></a>
+                                    <a href="courses"><span>Cursos</span></a>
                                 </li>
                                 <li>
-                                    <a href="contact.html"><span>Contato</span></a>
+                                    <a href="contact"><span>Contato</span></a>
                                 </li>
                                 <li>
-                                    <a href="local.html"><span>Nosso Espaço</span></a>
+                                    <a href="local"><span>Nosso Espaço</span></a>
                                 </li>
                             </ul>
                         </nav>
@@ -93,7 +93,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="xb-header-menu-scroll">
                                     <div class="xb-menu-close xb-hide-xl xb-close"></div>
                                     <div class="xb-logo-mobile xb-hide-xl">
-                                        <a href="index.html" rel="home"><img src="assets/img/logo/logo.svg" alt=""></a></div>
+                                        <a href="" rel="home"><img src="{% static 'img/logo/logo.svg' %}" alt=""></a></div>
                                     <div class="xb-header-mobile-search xb-hide-xl">
                                         <form role="search" action="#">
                                             <input type="text" placeholder="Search..." name="s" class="search-field">
@@ -101,10 +101,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </div>
                                     <nav class="xb-header-nav">
                                         <ul class="xb-menu-primary clearfix">
-                                            <li class="menu-item"><a href="/index.html"><span>Ínicio</span></a></li>
-                                            <li class="menu-item"><a href="courses.html"><span>Cursos</span></a></li>
-                                            <li class="menu-item"><a href="contact.html"><span>Contato</span></a></li>
-                                            <li class="menu-item"><a href="local.html"><span>Nosso Espaço</span></a></li>
+                                            <li class="menu-item"><a href=""><span>Ínicio</span></a></li>
+                                            <li class="menu-item"><a href="courses"><span>Cursos</span></a></li>
+                                            <li class="menu-item"><a href="contact"><span>Contato</span></a></li>
+                                            <li class="menu-item"><a href="local"><span>Nosso Espaço</span></a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -114,11 +114,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
                     <div class="side-menu d-none d-lg-block">
                         <a class="burger-menu" href="javascript:void(0);">
-                            <img src="assets/img/icon/category.svg" alt="">
+                            <img src="{% static 'img/icon/category.svg' %}" alt="">
                         </a>
                     </div>
                     <div class="header-bar-mobile side-menu d-lg-none">
-                        <a class="xb-nav-mobile" href="javascript:void(0);"><img src="assets/img/icon/category.svg" alt=""></a>
+                        <a class="xb-nav-mobile" href="javascript:void(0);"><img src="{% static 'img/icon/category.svg' %}" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -135,10 +135,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="col-xl-8 col-md-7 left-area">
                 <nav>
                     <ul>
-                        <li><a href="index.html">Ínicio</a></li>  
-                        <li><a href="courses.html">Cursos</a></li>
-                        <li><a href="contact.html">Contato</a></li>
-                        <li><a href="local.html">Nosso Espaço</a></li>
+                        <li><a href="">Ínicio</a></li>  
+                        <li><a href="courses">Cursos</a></li>
+                        <li><a href="contact">Contato</a></li>
+                        <li><a href="local">Nosso Espaço</a></li>
                     </ul> 
                 </nav> 
             </div>
@@ -169,7 +169,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="breadcrumb__content text-center">
                     <h2 class="breadcrumb__title">Cursos</h2>
                     <ul class="breadcrumb__list">
-                        <li class="breadcrumb-item"><a href="index.html">Ínicio</a></li>
+                        <li class="breadcrumb-item"><a href="">Ínicio</a></li>
                         <li class="breadcrumb-item">Cursos</li>
                     </ul>
                 </div>
@@ -186,7 +186,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <p class="section-content">Cursos de Especialização, Aperfeiçoamento e Imersão em Medicina, Odontologia e demais áreas da saúde.</p>
                 </div>
                 <div class="about-img pos-rel">
-                    <img src="assets/img/about/img02.jpg" alt="">
+                    <img src="{% static 'img/about/img02.jpg' %}" alt="">
                     <div class="about-year">
                         <h2 class="xb-odm"><span class="xbo" data-count="11">00</span></h2>
                         <p>Anos de <br>Experiência</p>
@@ -228,7 +228,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <h3 class="title xb-split-text split-in-right">Eleve suas capacidades <br> <span>a um outro nível</span></h3>
                     </div>
                     <div class="service-logo mb-30">
-                        <img src="assets/img/About/ab_logo.jpg" alt="">
+                        <img src="{% static 'img/About/ab_logo.jpg' %}" alt="">
                     </div>
                 </div>
                 <div class="row courses">
@@ -243,7 +243,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- main area end  -->
 
    <!-- footer strt -->
-   <footer class="footer xb-footer-bg bg_img ukiyo" data-u-speed="1.5" data-background="assets/img/bg/footer_bg.jpg">
+   <footer class="footer xb-footer-bg bg_img ukiyo" data-u-speed="1.5" data-background="{% static 'img/bg/footer_bg.jpg' %}">
     <div class="xb-footer-wrap pt-120 pb-80">
         <div class="container">
             <div class="xb-footer-inner">
@@ -253,7 +253,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <a class="circle-btn xb-item--left pos-rel" href="https://wa.me/557399180037" target="_blank">
                                 <div class="button__bg"></div>
                                 <div class="xb-item--icon">
-                                    <img src="assets/img/icon/arrow-up-2.svg" alt="">
+                                    <img src="{% static 'img/icon/arrow-up-2.svg' %}" alt="">
                                 </div>
                                 <span class="xb-item--head">Entre em<br/> contato</span>
                             </a>
@@ -263,8 +263,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            
                                 <h4 class="widget-title">LINKS  ÚTEIS</h4>
                                 <ul class="footer-links">
-                                    <li><a href="contact.html">Contato</a></li>
-                                    <li><a href="courses.html">Cursos</a></li>
+                                    <li><a href="contact">Contato</a></li>
+                                    <li><a href="courses">Cursos</a></li>
                                     <li><a href="https://wa.me/557399180037" target="_blank"><i class="fab fa-whatsapp">&nbsp;</i>Whatsapp</a></li>
                                     <li><a href="https://www.instagram.com/centromoderne/" target="_blank"><i class="fab fa-instagram">&nbsp;</i>Instagram</a></li>
                                 </ul>
@@ -287,7 +287,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="footer-bottom ul_li_between">
                     <div class="copyright">
-                        <p>Copyright © 2025 <a href="index.html">Centro Moderne</a>. Todos direitos reservados.</p>
+                        <p>Copyright © 2025 <a href="">Centro Moderne</a>. Todos direitos reservados.</p>
                     </div>
 
                 </div>
@@ -389,14 +389,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="xb-service-box">
             <div class="xb-item--inner ul_li">
               <div class="xb-item--icon">
-                <img src="assets/img/icon/srv_06.svg" alt="">
+                <img src="{% static 'img/icon/srv_06.svg' %}" alt="">
               </div>
               <div class="xb-item--holder">
                 <h3 class="xb-item--title">${course.title}</h3>
                 <p class="xb-item--content">${course.level}</p>
               </div>
               <span class="xb-item--shape">
-                <img src="assets/img/icon/soon.png" alt="" style=" position: relative;">
+                <img src="{% static 'img/icon/soon.png' %}" alt="" style=" position: relative;">
               </span>
               <a class="xb-overlay show-soon-popup" href="javascript:void(0);"></a>
             </div>
@@ -409,14 +409,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="xb-service-box">
             <div class="xb-item--inner ul_li">
               <div class="xb-item--icon">
-                <img src="assets/img/icon/srv_06.svg" alt="">
+                <img src="{% static 'img/icon/srv_06.svg' %}" alt="">
               </div>
               <div class="xb-item--holder">
                 <h3 class="xb-item--title">${course.title}</h3>
                 <p class="xb-item--content">${course.level}</p>
               </div>
               <span class="xb-item--shape">
-                <img src="assets/img/icon/srv_shape.png" alt="">
+                <img src="{% static 'img/icon/srv_shape.png' %}" alt="">
               </span>
               <a class="xb-overlay" href="${course.src}"></a>
             </div>
@@ -514,31 +514,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
 <!-- jquery include -->
-<script src="assets/js/jquery-3.7.1.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/swiper.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/gsap.min.js"></script>
-<script src="assets/js/ScrollSmoother.min.js"></script>
-<script src="assets/js/ScrollTrigger.min.js"></script>
-<script src="assets/js/SplitText.min.js"></script>
-<script src="assets/js/appear.js"></script>
-<script src="assets/js/odometer.min.js"></script>
-<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="assets/js/jquery.marquee.min.js"></script>
-<script src="assets/js/isotope.pkgd.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/touchspin.js"></script>
-<script src="assets/js/jquery-ui.min.js"></script>
-<script src="assets/js/imageRevealHover.js"></script>
-<script src="assets/js/TweenMax.min.js"></script>
-<script src="assets/js/parallax-scroll.js"></script>
-<script src="assets/js/easing.min.js"></script>
-<script src="assets/js/scrollspy.js"></script>
-<script src="assets/js/ukiyo.min.js"></script>
-<script src="assets/js/lenis.js"></script>
-<script src="assets/js/moment.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/swiper.min.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/gsap.min.js' %}"></script>
+<script src="{% static 'js/ScrollSmoother.min.js' %}"></script>
+<script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
+<script src="{% static 'js/SplitText.min.js' %}"></script>
+<script src="{% static 'js/appear.js' %}"></script>
+<script src="{% static 'js/odometer.min.js' %}"></script>
+<script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'js/jquery.marquee.min.js' %}"></script>
+<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/touchspin.js' %}"></script>
+<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+<script src="{% static 'js/imageRevealHover.js' %}"></script>
+<script src="{% static 'js/TweenMax.min.js' %}"></script>
+<script src="{% static 'js/parallax-scroll.js' %}"></script>
+<script src="{% static 'js/easing.min.js' %}"></script>
+<script src="{% static 'js/scrollspy.js' %}"></script>
+<script src="{% static 'js/ukiyo.min.js' %}"></script>
+<script src="{% static 'js/lenis.js' %}"></script>
+<script src="{% static 'js/moment.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 
 
 </body>
