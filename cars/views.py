@@ -99,4 +99,4 @@ def chat_api(request):
         return JsonResponse({'response': response})
         
     except Exception as e:
-        return JsonResponse({'error': 'Erro interno do servidor'}, status=500)
+        return render(request, 'index.html')
