@@ -9,7 +9,11 @@ import json
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
-from openai_api.client import get_ai_response, get_fallback_response
+from openai_api.client import (
+	AIUnavailableError,
+	get_ai_response,
+	get_fallback_response,
+)
 
 def index(request):
 	return render(request, 'index.html')
@@ -111,10 +115,23 @@ def chat_api(request):
         """
         try:
             response = get_ai_response(company_context, provider='chatgpt')
-        except:
+        except AIUnavailableError:
+            # IA fora do ar: responde com o conteudo pronto em vez de
+            # mostrar uma mensagem de erro para o visitante.
             response = get_fallback_response(user_message)
-        
+
         return JsonResponse({'response': response})
-        
+
+    except json.JSONDecodeError:
+        return JsonResponse(
+            {'response': 'Nao consegui ler sua mensagem. Tente novamente.'},
+            status=400,
+        )
     except Exception as e:
-        return render(request, 'index.html')
+        print(f'Erro inesperado no chat_api: {e}')
+        return JsonResponse(
+            {'response': get_fallback_response(
+                locals().get('user_message', '')
+            )},
+            status=200,
+        )

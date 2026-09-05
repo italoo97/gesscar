@@ -28,4 +28,7 @@ def car_pre_save(sender, instance, **kwargs):
         ai_bio = get_car_ai(
             instance.model, instance.brand, instance.model_year
         )
-        instance.bio = ai_bio
+        # get_car_ai devolve None quando a IA esta indisponivel; nesse caso
+        # o carro e salvo sem bio em vez de quebrar o cadastro.
+        if ai_bio:
+            instance.bio = ai_bio

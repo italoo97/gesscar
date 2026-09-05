@@ -447,6 +447,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Enviar para backend
     async function sendToBackend(message) {
+        // Aborta a requisição se o backend demorar demais, para o chat não
+        // ficar preso no indicador de "digitando".
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 20000);
+
         try {
             const response = await fetch('/api/chat/', {
                 method: 'POST',
@@ -454,12 +459,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/json',
                     'X-CSRFToken': getCSRFToken()
                 },
-                body: JSON.stringify({ message: message })
+                body: JSON.stringify({ message: message }),
+                signal: controller.signal
             });
-            
+
             const data = await response.json();
             hideTypingIndicator();
-            
+
             if (data.response) {
                 addMessage(data.response, 'bot');
             } else {
@@ -467,7 +473,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } catch (error) {
             hideTypingIndicator();
-            addMessage('Erro de conexão. Verifique sua internet e tente novamente.', 'bot');
+            if (error.name === 'AbortError') {
+                addMessage('A resposta está demorando mais que o normal. Tente novamente em instantes.', 'bot');
+            } else {
+                addMessage('Erro de conexão. Verifique sua internet e tente novamente.', 'bot');
+            }
+        } finally {
+            clearTimeout(timeoutId);
         }
     }
 
